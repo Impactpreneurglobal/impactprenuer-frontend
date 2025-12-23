@@ -24,12 +24,14 @@ export function Header() {
     <div className="flex items-center justify-between px-4 py-3 shadow-md bg-white fixed top-0 left-0 w-full z-50">
       {/* Left: Logo */}
       <div className="flex-shrink-0">
+         <Link href="/">
         <Image
           src="/logo.png"
           alt="Logo"
           width={50}
           height={50}
         />
+         </Link>
       </div>
 
       {/* Center: Navigation Menu (desktop) */}
@@ -41,38 +43,10 @@ export function Header() {
                 <Link href="/about">About</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
-            <NavigationMenuItem className="hidden md:block">
-              <NavigationMenuTrigger>Programs</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[300px] gap-4">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link href="#">
-                        <div className="font-medium">Components</div>
-                        <div className="text-muted-foreground">
-                          Browse all components in the library.
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link href="#">
-                        <div className="font-medium">Documentation</div>
-                        <div className="text-muted-foreground">
-                          Learn how to use the library.
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link href="#">
-                        <div className="font-medium">Blog</div>
-                        <div className="text-muted-foreground">
-                          Read our latest blog posts.
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                <Link href="/programs">Programs</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem className="hidden md:block">
               <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
@@ -80,26 +54,10 @@ export function Header() {
                 <ul className="grid w-[300px] gap-4">
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="#">
-                        <div className="font-medium">Components</div>
-                        <div className="text-muted-foreground">
-                          Browse all components in the library.
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link href="#">
-                        <div className="font-medium">Documentation</div>
-                        <div className="text-muted-foreground">
-                          Learn how to use the library.
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link href="#">
+                      <Link href="/resources/blogs">
                         <div className="font-medium">Blog</div>
                         <div className="text-muted-foreground">
-                          Read our latest blog posts.
+                          Thoughtful articles on creating meaningful change through impact‑driven ventures and sustainable business practices.
                         </div>
                       </Link>
                     </NavigationMenuLink>

@@ -2,8 +2,8 @@
 
 import * as React from "react"
 import { Button } from "@/src/components/ui/button"
-import Image from "next/image"
 import { ChevronRight, ChevronLeft, ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 export function CarouselCard() {
   const [currentIndex, setCurrentIndex] = React.useState(0)
