@@ -50,7 +50,7 @@ const slides = [
   }, [])
 
   return (
-   <div className="relative w-full h-[70vh] md:h-[400px] overflow-hidden shadow-lg">
+   <div className="relative w-full h-[70vh] md:h-[520px] overflow-hidden shadow-lg">
   {/* Carousel Slides */}
   <div className="w-full h-full relative">
     {slides.map((slide, index) => (
