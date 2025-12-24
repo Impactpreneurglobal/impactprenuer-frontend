@@ -2,6 +2,7 @@
 
 import { HeroSection } from "@/src/components/common/HeroCard";
 import {Header} from "@/src/components/common/Header";
+import {JoinCommunity} from "@/src/components/blocks/JoinCommunity";
 import {ImageTextSection} from "@/src/components/common/ImageTextSection"
 
 
@@ -39,7 +40,15 @@ export default function About(){
                   imageUrl="/images/slide1.png"
                 //   imageRight={true}
                 //   isButton={true}
-                />
+            />
+           <JoinCommunity
+                  badgeText="OUR COMMUNITY"
+                  title="Join Our Community"
+                  body="Our journey started with a clear vision: create a world where success isn’t reserved for a few, but is available to anyone with the passion to build. Through training programs, leadership labs, and community-building initiatives, Impactpreneur Global has grown into a powerful ecosystem. As we scale, we are expanding our offerings to include digital products — e-books, courses, and guides — so learners can access high-quality material on demand."
+                  imageUrl="/images/slide1.png"
+                //   imageRight={true}
+                  isButton={true}
+            />
           
     </main>
     )
