@@ -8,6 +8,7 @@ import { Badge } from "@/src/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import  ProfileCard   from "@/src/components/common/ProfileCard";
 import { BlogCard } from "../components/common/BlogCard";
+import { TestimonialCarouselSection } from "../components/blocks/TestimonialCard";
 
 export default function Home() {
   // JSON data for feature cards
@@ -291,6 +292,29 @@ const profileCards = [
           </Button>
         </div>
       </section>
+    <TestimonialCarouselSection
+      slides={[
+        {
+          image: "/images/profile1.jpg",
+          testimonial:
+            "Impactprenuer Global helped me refine my ideas and connect with people who truly care about social impact.",
+          author: "David Dominic",
+        },
+        {
+          image: "/images/profile2.jpg",
+          testimonial:
+            "The community and mentorship here transformed how I approach innovation and leadership.",
+          author: "Amarachi Babalola",
+        },
+        {
+          image: "/images/profile3.jpg",
+          testimonial:
+            "This platform gave me clarity, confidence, and a strong support system.",
+          author: "Isaac Oladunjoye",
+        },
+      ]}
+    />
+
 
 
     </main>
