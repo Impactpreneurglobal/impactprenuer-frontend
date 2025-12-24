@@ -6,6 +6,8 @@ import {ProgramCard} from "@/src/components/common/ProgramCard";
 import { Badge } from "@/src/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/src/components/ui/button";
+import { GeneralLayout } from "@/src/components/common/GeneralLayout";
+
 
 const programCards = [
   {
@@ -132,9 +134,8 @@ const programCards = [
 
 export default function Programs(){
     return(
+      <GeneralLayout>
     <main>
-
-        <Header />
         <HeroSection
             badgeText="PROGRAMS"
             title="Programs Designed to Unlock Potential and Drive Real Change"
@@ -168,5 +169,6 @@ export default function Programs(){
             </div>
             </section>
     </main>
+    </GeneralLayout>
     )
 }

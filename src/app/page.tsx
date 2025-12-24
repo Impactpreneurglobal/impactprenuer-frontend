@@ -1,5 +1,4 @@
 import { Button } from "@/src/components/ui/button";
-import { Header } from "@/src/components/common/Header";
 import { CarouselCard } from "@/src/components/blocks/Carousel";
 import { ImageTextSection } from "@/src/components/common/ImageTextSection";
 import { FeatureCard } from "@/src/components/blocks/FeatureCard";
@@ -9,6 +8,8 @@ import { ArrowRight } from "lucide-react";
 import  ProfileCard   from "@/src/components/common/ProfileCard";
 import { BlogCard } from "../components/common/BlogCard";
 import { TestimonialCarouselSection } from "../components/blocks/TestimonialCard";
+import { SponsorSection } from "@/src/components/common/SponsorSection";
+import { GeneralLayout } from "@/src/components/common/GeneralLayout";
 
 export default function Home() {
   // JSON data for feature cards
@@ -127,8 +128,8 @@ const profileCards = [
 ];
 
   return (
+    <GeneralLayout>
     <main className="">
-      <Header />
       <CarouselCard />
 
       {/* ImageTextSection with green background */}
@@ -269,7 +270,7 @@ const profileCards = [
           </div>
         </div>
 
-        {/* Cards */}
+        {/* Blogs */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center items-stretch mt-8">
           {programCards.map((program) => (
             <BlogCard
@@ -292,6 +293,7 @@ const profileCards = [
           </Button>
         </div>
       </section>
+
     <TestimonialCarouselSection
       slides={[
         {
@@ -315,8 +317,17 @@ const profileCards = [
       ]}
     />
 
-
+     <SponsorSection
+        sponsors={[
+          { name: "Sponsor 1", logo: "/logos/partner1.png" },
+          { name: "Sponsor 2", logo: "/logos/partner2.png" },
+          { name: "Sponsor 3", logo: "/logos/partner3.png" },
+          { name: "Sponsor 4", logo: "/logos/partner4.png" },
+          { name: "Sponsor 5", logo: "/logos/partner5.png" },
+        ]}
+    />
 
     </main>
+    </GeneralLayout>
   );
 }

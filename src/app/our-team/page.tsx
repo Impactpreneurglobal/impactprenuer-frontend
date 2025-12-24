@@ -2,7 +2,6 @@
 
 import { HeroSection } from "@/src/components/common/HeroCard";
 import { Button } from "@/src/components/ui/button";
-import { Header } from "@/src/components/common/Header";
 import { CarouselCard } from "@/src/components/blocks/Carousel";
 import { ImageTextSection } from "@/src/components/common/ImageTextSection";
 import { FeatureCard } from "@/src/components/blocks/FeatureCard";
@@ -10,6 +9,7 @@ import {ProgramCard} from "@/src/components/common/ProgramCard";
 import { Badge } from "@/src/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import  ProfileCard   from "@/src/components/common/ProfileCard";
+import { GeneralLayout } from "@/src/components/common/GeneralLayout";
 
 const profileCards = [
   {
@@ -65,9 +65,9 @@ const profileCards = [
 
 export default function OurTeam(){
     return(
+      <GeneralLayout>
     <main>
 
-        <Header />
         <HeroSection
             badgeText="OUR TEAM"
             title="Our Team Members"
@@ -110,5 +110,6 @@ export default function OurTeam(){
         </div>
       </section>
     </main>
+    </GeneralLayout>
     )
 }
