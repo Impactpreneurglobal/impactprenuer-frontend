@@ -7,6 +7,7 @@ import {ProgramCard} from "@/src/components/common/ProgramCard";
 import { Badge } from "@/src/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import  ProfileCard   from "@/src/components/common/ProfileCard";
+import { BlogCard } from "../components/common/BlogCard";
 
 export default function Home() {
   // JSON data for feature cards
@@ -89,7 +90,7 @@ const profileCards = [
     id: 1,
     name: "Jane Doe",
     title: "Founder & CEO",
-    imageUrl: "/images/profile1.png",
+    imageUrl: "/images/profile1.jpg",
     socialLinks: {
       twitter: "https://twitter.com/janedoe",
       linkedin: "https://linkedin.com/in/janedoe",
@@ -100,7 +101,7 @@ const profileCards = [
     id: 2,
     name: "John Smith",
     title: "Lead Developer",
-    imageUrl: "/images/profile2.png",
+    imageUrl: "/images/profile4.jpg",
     socialLinks: {
       twitter: "https://twitter.com/johnsmith",
       linkedin: "https://linkedin.com/in/johnsmith",
@@ -111,13 +112,13 @@ const profileCards = [
     id: 3,
     name: "Alice Johnson",
     title: "Marketing Head",
-    imageUrl: "/images/profile3.png",
+    imageUrl: "/images/profile3.jpg",
   },
   {
     id: 4,
     name: "Bob Williams",
     title: "Product Designer",
-    imageUrl: "/images/profile4.png",
+    imageUrl: "/images/profile2.jpg",
     socialLinks: {
       linkedin: "https://linkedin.com/in/bobwilliams",
     },
@@ -210,16 +211,27 @@ const profileCards = [
       </section>
 
       <section className="py-16 px-4 sm:px-6 lg:px-20">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          {/* Left */}
           <div className="space-y-2">
             <Badge variant="muted" className="w-fit">
-              TEAM
+              OUR TEAM
             </Badge>
+
             <h1 className="text-[24px] sm:text-[28px] font-dm-sans text-[#003715] font-bold">
               Meet Our Team
             </h1>
           </div>
+
+          {/* Right - hidden on mobile */}
+          <div className="hidden sm:flex">
+            <Button variant="ghost" className="flex items-center gap-1">
+              See all
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
         </div>
+
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center items-stretch mt-8">
          {profileCards.map((profile) => (
@@ -234,6 +246,51 @@ const profileCards = [
         </div>
       </section>
 
+      <section className="py-16 px-4 sm:px-6 lg:px-20">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          {/* Left */}
+          <div className="space-y-2">
+            <Badge variant="muted" className="w-fit">
+              BLOGS
+            </Badge>
+
+            <h1 className="text-[24px] sm:text-[28px] font-dm-sans text-[#003715] font-bold">
+             Explore Our Latest Insights, Stories & Updates
+            </h1>
+          </div>
+
+          {/* Right - hidden on mobile */}
+          <div className="hidden sm:flex">
+            <Button variant="ghost" className="flex items-center gap-1">
+              See all
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+
+        {/* Cards */}
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center items-stretch mt-8">
+          {programCards.map((program) => (
+            <BlogCard
+              key={program.id}
+              title={program.title}
+              date={program.date}
+              subtitle={program.subtitle}
+              imageUrl={program.imageUrl}
+              ctaText={program.ctaText}
+              ctaHref={program.ctaHref}
+            />
+          ))}
+        </div>
+
+        {/* Mobile button - visible only on mobile */}
+        <div className="mt-8 flex justify-center sm:hidden">
+          <Button variant="ghost" className="flex items-center gap-1">
+            See all
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        </div>
+      </section>
 
 
     </main>
