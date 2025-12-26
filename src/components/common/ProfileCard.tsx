@@ -4,6 +4,7 @@ import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import Link from "next/link";
 
 interface ProfileCardProps {
+  id?: number |string;
   name: string;
   title: string;
   imageUrl: string;
@@ -15,6 +16,7 @@ interface ProfileCardProps {
 }
 
 const ProfileCard: React.FC<ProfileCardProps> = ({
+  id,
   name,
   title,
   imageUrl,
@@ -48,7 +50,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           md:group-hover:opacity-100
         ">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-normal text-sm tracking-wide">
-          <Link href="/team">See Details</Link>
+          <Link href={`/our-team/${id}`}>See Details</Link>
         </div>
           {/* Bottom content */}
           <div className="

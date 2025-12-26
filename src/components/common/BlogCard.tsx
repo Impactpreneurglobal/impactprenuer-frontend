@@ -3,21 +3,23 @@ import { Card, CardContent, CardHeader } from "@/src/components/ui/card"
 import Link from "next/link"
 
 export interface BlogCardProps {
+  id: string | number
   title?: string
   date?: string
   subtitle?: string
-  ctaText?: string
-  ctaHref?: string
+  body?: string
+  blogUrl?: string
   imageUrl?: string
 }
 
 export function BlogCard({
+  id,
   imageUrl = "/images/slide1.png",
   title = "Young Investors",
   date = "28 October, 2025",
   subtitle = "At Impactpreneur Global, we bring together aspiring social entrepreneurs, nonprofits, and changemakers—and provide them with the lead.",
-  ctaText = "See more",
-  ctaHref = "#",
+  body,
+  blogUrl,
 }: BlogCardProps) {
   return (
     <Card className="overflow-hidden rounded-xl flex flex-col max-w-[300px] border-none shadow-none">
@@ -52,11 +54,17 @@ export function BlogCard({
             </p>
           )}
 
+          {body && (
+            <p className="text-muted-foreground text-xs sm:text-sm line-clamp-3">
+              {body}
+            </p>
+          )}
+
           <Link
-            href={ctaHref}
+            href={`blogs/${id}`}
             className="inline-block text-[#004119] text-sm font-medium"
           >
-            {ctaText}
+            See more
           </Link>
         </div>
       </CardContent>

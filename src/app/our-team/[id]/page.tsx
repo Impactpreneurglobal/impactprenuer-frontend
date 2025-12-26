@@ -1,0 +1,127 @@
+"use client"
+
+import { TeamDetail } from "@/src/components/common/TeamDetailCard";
+import { GeneralLayout } from "@/src/components/common/GeneralLayout";
+import { useState } from "react"
+import  ProfileCard   from "@/src/components/common/ProfileCard";
+import { Button } from "@/src/components/ui/button";
+import { CarouselCard } from "@/src/components/blocks/Carousel";
+import { ImageTextSection } from "@/src/components/common/ImageTextSection";
+import { FeatureCard } from "@/src/components/blocks/FeatureCard";
+import {ProgramCard} from "@/src/components/common/ProgramCard";
+import { Badge } from "@/src/components/ui/badge";
+import { ArrowRight } from "lucide-react";
+ 
+
+const profileCards = [
+  {
+    id: 1,
+    name: "Promise Joshua",
+    title: "Co-founder & Global Community Architect",
+    imageUrl: "/images/profile1.jpg",
+    socialLinks: {
+      twitter: "https://twitter.com/janedoe",
+      linkedin: "https://linkedin.com/in/janedoe",
+      github: "https://github.com/janedoe",
+    },
+  },
+  {
+    id: 2,
+    name: "George Bassey",
+    title: "Co-founder & Global Business Architect",
+    imageUrl: "/images/profile4.jpg",
+    socialLinks: {
+      twitter: "https://twitter.com/johnsmith",
+      linkedin: "https://linkedin.com/in/johnsmith",
+      github: "https://github.com/johnsmith",
+    },
+  },
+  {
+    id: 3,
+    name: "Alice Johnson",
+    title: "Marketing Head",
+    imageUrl: "/images/profile3.jpg",
+  },
+  {
+    id: 4,
+    name: "Charles Horice",
+    title: "Head of Technology",
+    imageUrl: "/images/profile2.jpg",
+    socialLinks: {
+      linkedin: "https://linkedin.com/in/bobwilliams",
+    },
+  },
+  {
+    id: 5,
+    name: "Chukwuchebem David",
+    title: "Tech Specialist",
+    imageUrl: "/images/profile5.jpeg",
+    socialLinks: {
+      twitter: "https://twitter.com/johnsmith",
+      linkedin: "https://linkedin.com/in/johnsmith",
+      github: "https://github.com/johnsmith",
+    },
+  },
+  
+];
+ 
+
+
+export default function TeamDetailPage(){
+    
+    return(
+        <GeneralLayout>
+        <main>
+
+           <TeamDetail
+            name="Daniel Dominic"
+            title="Lead Software Engineer"
+            bio="Daniel is a full-stack developer with experience in Django, Next.js, and UX design. He focuses on building scalable and user-friendly digital products."
+            imageUrl="/images/profile1.jpg"
+            socialLinks={{
+                twitter: "https://twitter.com/daniel_dominic1",
+                linkedin: "https://linkedin.com/in/daniel-dominic",
+                github: "https://github.com/danieldominic",
+            }}
+            />
+
+      <section className="py-16 px-4 sm:px-6 lg:px-20">
+         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          {/* Left */}
+          <div className="space-y-2">
+            <Badge variant="muted" className="w-fit">
+              OUR TEAM
+            </Badge>
+
+            <h1 className="text-[24px] sm:text-[28px] font-dm-sans text-[#003715] font-bold">
+              Meet Our Team
+            </h1>
+          </div>
+
+          {/* Right - hidden on mobile */}
+          <div className="hidden sm:flex">
+            <Button variant="ghost" className="flex items-center gap-1">
+              See all
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center items-stretch mt-8">
+         {profileCards.map((profile) => (
+        <ProfileCard
+          key={profile.name} // Use name as key if it's unique
+          name={profile.name}
+          title={profile.title}
+          imageUrl={profile.imageUrl}
+          socialLinks={profile.socialLinks}
+        />
+      ))}
+        </div>
+      </section>
+        </main>
+
+        </GeneralLayout>
+    )
+}

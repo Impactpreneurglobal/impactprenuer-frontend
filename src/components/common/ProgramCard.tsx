@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader } from "@/src/components/ui/card"
 import Link from "next/link"
 
 export interface ProgramCardProps {
+  id: string | number
   title?: string
   date?: string
   subtitle?: string
@@ -11,7 +12,9 @@ export interface ProgramCardProps {
   imageUrl?: string
 }
 
+
 export function ProgramCard({
+  id,
   imageUrl = "/images/slide1.png",
   title = "Young Investors",
   date = "28 October, 2025",
@@ -51,13 +54,14 @@ export function ProgramCard({
               {subtitle}
             </p>
           )}
-
-          <Link
-            href={ctaHref}
-            className="inline-block text-[#004119] text-sm font-medium"
+{/* route to /programs/[id] */}
+         <Link
+            href={`/programs/${id}`}
+            
           >
-            {ctaText}
+            See more
           </Link>
+
         </div>
       </CardContent>
     </Card>
