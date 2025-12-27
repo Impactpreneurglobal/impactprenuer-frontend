@@ -4,36 +4,37 @@ import * as React from "react"
 import { Button } from "@/src/components/ui/button"
 import { ChevronRight, ChevronLeft, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export function CarouselCard() {
   const [currentIndex, setCurrentIndex] = React.useState(0)
 
 const slides = [
   {
-    src: "/images/slide1.png",
+    src: "/images/carousel1.jpg",
     title: "Empowering Change Through Purpose, Innovation & Education",
     description: "At Impactprenuer Global, we bring together aspiring social entrepreneurs, nonprofits, and changemakers—and provide them with the leadership training, digital tools, and community support needed to drive sustainable progress across Africa.",
   },
   {
-    src: "/images/slide1.png",
+    src: "/images/carousel2.jpg",
     title: "Learn & Grow Through Practical Knowledge",
     description: "We provide interactive programs and curated resources to help social innovators enhance their skills, expand their knowledge, and achieve real-world impact.",
   },
-  {
-    src: "/images/slide1.png",
-    title: "Collaborate & Build Meaningful Connections",
-    description: "Connect with like-minded changemakers, mentors, and organizations to share ideas, projects, and strategies that drive sustainable social change.",
-  },
-  {
-    src: "/images/slide1.png",
-    title: "Innovate & Transform Communities",
-    description: "Encouraging creativity and experimentation, we empower you to design innovative solutions that address pressing social challenges across Africa.",
-  },
-  {
-    src: "/images/slide1.png",
-    title: "Get Started & Make an Impact",
-    description: "Join our vibrant community today and gain access to the tools, guidance, and network needed to turn your ideas into tangible social impact.",
-  },
+  // {
+  //   src: "/images/slide1.jpg",
+  //   title: "Collaborate & Build Meaningful Connections",
+  //   description: "Connect with like-minded changemakers, mentors, and organizations to share ideas, projects, and strategies that drive sustainable social change.",
+  // },
+  // {
+  //   src: "/images/slide1.jpg",
+  //   title: "Innovate & Transform Communities",
+  //   description: "Encouraging creativity and experimentation, we empower you to design innovative solutions that address pressing social challenges across Africa.",
+  // },
+  // {
+  //   src: "/images/slide1.jpg",
+  //   title: "Get Started & Make an Impact",
+  //   description: "Join our vibrant community today and gain access to the tools, guidance, and network needed to turn your ideas into tangible social impact.",
+  // },
 ]
 
 
@@ -77,12 +78,16 @@ const slides = [
 
   {/* Join Button (above overlay) */}
   <div className="absolute bottom-20 md:bottom-10 left-1/2 md:left-20 transform -translate-x-1/2 md:translate-x-0 z-20 flex flex-row gap-1 md:gap-4 items-center">
+  <Link href="#">
   <Button className="flex items-center justify-center">
     Join Our Community <ArrowRight className="ms-1" />
   </Button>
+  </Link>
+  <Link href="/resources/blogs">
   <Button variant="secondary" className="flex items-center justify-center">
     Explore resources <ArrowRight className="ms-1" />
   </Button>
+  </Link>
 </div>
 
 

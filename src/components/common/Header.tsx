@@ -2,7 +2,13 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon, MenuIcon, XIcon } from "lucide-react"
+import Image from "next/image"
+import {
+  MenuIcon,
+  XIcon,
+  ChevronDown,
+} from "lucide-react"
+
 import { useIsMobile } from "@/src/hooks/use-mobile"
 import {
   NavigationMenu,
@@ -13,120 +19,152 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/src/components/ui/navigation-menu"
-import Image from "next/image"
 import { Button } from "@/src/components/ui/button"
 
 export function Header() {
   const isMobile = useIsMobile()
   const [mobileOpen, setMobileOpen] = React.useState(false)
+  const [resourcesOpen, setResourcesOpen] = React.useState(false)
 
   return (
-    <div className="flex items-center justify-between px-4 py-3 shadow-md bg-white fixed top-0 left-0 w-full z-50">
-      {/* Left: Logo */}
-      <div className="flex-shrink-0">
-         <Link href="/">
-        <Image
-          src="/logo.png"
-          alt="Logo"
-          width={50}
-          height={50}
+    <div className="fixed top-0 left-0 z-50 w-full bg-white shadow-md">
+      <div className="flex items-center justify-between px-4 py-3">
+        {/* Logo */}
+        <Link href="/">
+          <Image src="/logo.png" alt="Logo" width={50} height={50} />
+        </Link>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex flex-1 justify-center">
+          <NavigationMenu viewport={isMobile}>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/about">About</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/programs">Programs</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="w-[300px] space-y-2">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link href="/resources/blogs">
+                          <div className="font-medium">Blog</div>
+                          <p className="text-sm text-muted-foreground">
+                            Thoughtful articles on impact-driven ventures.
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/our-team">Our Team</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/contact">Contact</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+
+        {/* Right Actions */}
+        <div className="flex items-center gap-2">
+          <Button className="hidden md:inline-flex">
+            Join Our Community
+          </Button>
+
+          <button
+            className="md:hidden p-2 rounded-md hover:bg-gray-100"
+            onClick={() => setMobileOpen(true)}
+          >
+            <MenuIcon />
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Overlay */}
+      {mobileOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40"
+          onClick={() => setMobileOpen(false)}
         />
-         </Link>
-      </div>
+      )}
 
-      {/* Center: Navigation Menu (desktop) */}
-      <div className="hidden md:flex flex-1 justify-center">
-        <NavigationMenu viewport={isMobile}>
-          <NavigationMenuList className="flex-wrap">
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                <Link href="/about">About</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                <Link href="/programs">Programs</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem className="hidden md:block">
-              <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[300px] gap-4">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link href="/resources/blogs">
-                        <div className="font-medium">Blog</div>
-                        <div className="text-muted-foreground">
-                          Thoughtful articles on creating meaningful change through impact‑driven ventures and sustainable business practices.
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                <Link href="/our-team">Our Team</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                <Link href="/contact">Contact</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-      </div>
+      {/* Mobile Sidebar */}
+      <aside
+        className={`fixed top-0 left-0 z-50 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ${
+          mobileOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        {/* Close */}
+        <div className="flex justify-end p-4">
+          <button onClick={() => setMobileOpen(false)}>
+            <XIcon />
+          </button>
+        </div>
 
-      {/* Right: Join button & Hamburger */}
-      <div className="flex items-center gap-2">
-        <Button className="hidden md:inline-flex">
-          Join Our Community
-        </Button>
+        {/* Mobile Nav */}
+        <nav className="flex flex-col px-4 space-y-1">
+          <Link onClick={() => setMobileOpen(false)} href="/about" className="py-2 border-b">
+            About
+          </Link>
 
-        {/* Hamburger (mobile) */}
-        <button
-          className="md:hidden p-2 rounded-md hover:bg-gray-100"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          <MenuIcon />
-        </button>
-      </div>
+          <Link onClick={() => setMobileOpen(false)} href="/programs" className="py-2 border-b">
+            Programs
+          </Link>
 
-      {/* Mobile menu */}
-{/* Dark overlay */}
-{mobileOpen && (
-  <div
-    className="fixed inset-0 bg-black/50 z-30"
-    onClick={() => setMobileOpen(false)}
-  />
-)}
+          {/* Resources Dropdown (CLICK-BASED) */}
+          <button
+            onClick={() => setResourcesOpen(!resourcesOpen)}
+            className="flex items-center justify-between py-2 border-b text-left"
+          >
+            Resources
+            <ChevronDown
+              className={`transition-transform ${
+                resourcesOpen ? "rotate-180" : ""
+              }`}
+            />
+          </button>
 
-{/* Sidebar menu */}
-<div
-  className={`fixed top-0 left-0 h-full w-64 bg-white shadow-md z-40 transform transition-transform duration-300 ${
-    mobileOpen ? "translate-x-0" : "-translate-x-full"
-  }`}
->
-  {/* Close button */}
-  <div className="flex justify-end p-4">
-    <button onClick={() => setMobileOpen(false)} className="p-2 rounded-md hover:bg-gray-100">
-      <XIcon />
-    </button>
-  </div>
+          {resourcesOpen && (
+            <div className="pl-4">
+              <Link
+                href="/resources/blogs"
+                onClick={() => setMobileOpen(false)}
+                className="block py-2 text-sm"
+              >
+                Blog
+              </Link>
+            </div>
+          )}
 
-  {/* Menu links */}
-  <nav className="flex flex-col px-4">
-    <Link href="/about" className="py-2 border-b">About</Link>
-    <Link href="/our-team" className="py-2 border-b">Our Team</Link>
-    <Link href="/contact" className="py-2 border-b">Contact</Link>
-    <Link href="#" className="py-2 border-b">Programs</Link>
-    <Link href="#" className="py-2 border-b">Resources</Link>
-    <Button className="mt-4">Join Our Community</Button>
-  </nav>
-</div>
+          <Link onClick={() => setMobileOpen(false)} href="/our-team" className="py-2 border-b">
+            Our Team
+          </Link>
 
+          <Link onClick={() => setMobileOpen(false)} href="/contact" className="py-2 border-b">
+            Contact
+          </Link>
+
+          <Button className="mt-4">Join Our Community</Button>
+        </nav>
+      </aside>
     </div>
   )
 }

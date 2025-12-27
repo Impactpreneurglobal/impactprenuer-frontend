@@ -61,7 +61,7 @@ export function BlogCard({
           )}
 
           <Link
-            href={`blogs/${id}`}
+            href={`/resources/blogs/${id}`}
             className="inline-block text-[#004119] text-sm font-medium"
           >
             See more

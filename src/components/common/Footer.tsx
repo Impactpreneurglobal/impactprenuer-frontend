@@ -26,7 +26,7 @@ export function Footer() {
               </li>
               <li><Link href="/about" className="hover:underline text-light">About Us</Link></li>
               <li><Link href="/programs" className="hover:underline text-light">Programs</Link></li>
-              <li><Link href="/blog" className="hover:underline text-light">Blog</Link></li>
+              {/* <li><Link href="/blogs" className="hover:underline text-light">Blogs</Link></li> */}
               <li><Link href="/contact" className="hover:underline text-light">Contact Us</Link></li>
             </ul>
 
@@ -35,10 +35,10 @@ export function Footer() {
               <li className="mb-5">
                 <p className="font-bold text-[16px]">Resources</p>
               </li>
-              <li><Link href="/about" className="hover:underline text-light">About Us</Link></li>
-              <li><Link href="/programs" className="hover:underline text-light">Programs</Link></li>
-              <li><Link href="/blog" className="hover:underline text-light">Blog</Link></li>
-              <li><Link href="/contact" className="hover:underline text-light">Contact Us</Link></li>
+              {/* <li><Link href="/about" className="hover:underline text-light">About Us</Link></li> */}
+              {/* <li><Link href="/programs" className="hover:underline text-light">Programs</Link></li> */}
+              <li><Link href="/blogs" className="hover:underline text-light">Blogs</Link></li>
+              {/* <li><Link href="/contact" className="hover:underline text-light">Contact Us</Link></li> */}
             </ul>
 
             {/* Column 3 */}
@@ -46,10 +46,10 @@ export function Footer() {
               <li className="mb-5">
                 <p className="font-bold text-[16px]">Support</p>
               </li>
-              <li><Link href="/faq" className="hover:underline text-light">FAQ</Link></li>
-              <li><Link href="/help" className="hover:underline text-light">Help Center</Link></li>
-              <li><Link href="/terms" className="hover:underline text-light">Terms</Link></li>
-              <li><Link href="/privacy" className="hover:underline text-light">Privacy Policy</Link></li>
+              <li><Link href="/faq" className="hover:underline text-light">Join Our Community</Link></li>
+              {/* <li><Link href="/help" className="hover:underline text-light">Help Center</Link></li> */}
+              {/* <li><Link href="/terms" className="hover:underline text-light">Terms</Link></li> */}
+              {/* <li><Link href="/privacy" className="hover:underline text-light">Privacy Policy</Link></li> */}
             </ul>
           </div>
         </div>

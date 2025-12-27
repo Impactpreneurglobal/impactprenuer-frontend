@@ -13,46 +13,7 @@ import { ArrowRight } from "lucide-react";
 import  ProfileCard   from "@/src/components/common/ProfileCard";
 import { SponsorSection } from "@/src/components/common/SponsorSection";
 import { GeneralLayout } from "@/src/components/common/GeneralLayout";
-
-const profileCards = [
-  {
-    id: 1,
-    name: "Jane Doe",
-    title: "Founder & CEO",
-    imageUrl: "/images/profile1.jpg",
-    socialLinks: {
-      twitter: "https://twitter.com/janedoe",
-      linkedin: "https://linkedin.com/in/janedoe",
-      github: "https://github.com/janedoe",
-    },
-  },
-  {
-    id: 2,
-    name: "John Smith",
-    title: "Lead Developer",
-    imageUrl: "/images/profile4.jpg",
-    socialLinks: {
-      twitter: "https://twitter.com/johnsmith",
-      linkedin: "https://linkedin.com/in/johnsmith",
-      github: "https://github.com/johnsmith",
-    },
-  },
-  {
-    id: 3,
-    name: "Alice Johnson",
-    title: "Marketing Head",
-    imageUrl: "/images/profile3.jpg",
-  },
-  {
-    id: 4,
-    name: "Bob Williams",
-    title: "Product Designer",
-    imageUrl: "/images/profile2.jpg",
-    socialLinks: {
-      linkedin: "https://linkedin.com/in/bobwilliams",
-    },
-  },
-];
+import profileData from "@/src/ProfileData";
 
 
 export default function About(){
@@ -61,14 +22,21 @@ export default function About(){
     <main>
         <HeroSection
             badgeText="ABOUT US"
-            title="Empowering Changemakers to Build a Sustainable Future"
-            body="Welcome to Impactprenuer Global — a purpose-driven platform dedicated to equipping individuals, nonprofits, and social entrepreneurs with the tools, knowledge, and digital resources they need to create lasting impact in their communities. Through leadership development, capacity-building programs, and innovative digital products, we inspire and support the next generation of African change leaders."
+            title="Empowering African Entrepreneurs and Businesses to Build Impact-Driven, Revenue-Generating Ventures"
+            body="Impactpreneur Global is a purpose-led entrepreneurship platform supporting early-stage entrepreneurs and established African businesses to transform ideas into scalable, sustainable, and impact-driven ventures.
+We provide clear ideation-to-launch pathways, practical tools, mentorship, and strategic support that help founders move from vision to execution and from local relevance to global competitiveness."
             imageUrl="images/slide1.png"
           />
            <ImageTextSection
                   badgeText="WHO WE ARE"
                   // title="Transform Your Workflow"
-                  body="Impactpreneur Global is a youth-focused, mission-driven organization committed to equipping young people across Africa (and beyond) with entrepreneurial skills, leadership capabilities, and financial literacy. We believe that knowledge + opportunity = impact, and our goal is to make education and empowerment accessible to all."
+                  body="Impactpreneur Global is a purpose-driven business ecosystem supporting entrepreneurs and companies at different stages of growth.
+
+We are not an NGO.
+
+We are not a motivational brand.
+
+We are a venture-building platform focused on execution, sustainability, and measurable impact."
                   imageUrl="/images/slide1.png"
                   // imageRight={true}
                 //   isButton={true}
@@ -76,15 +44,25 @@ export default function About(){
            <ImageTextSection
                   badgeText="OUR STORY"
                   // title="Transform Your Workflow"
-                  body="Impactpreneur Global is a youth-focused, mission-driven organization committed to equipping young people across Africa (and beyond) with entrepreneurial skills, leadership capabilities, and financial literacy. We believe that knowledge + opportunity = impact, and our goal is to make education and empowerment accessible to all."
+                  body="Impactpreneur Global was created in response to a persistent gap:
+
+ideas without execution pathways don’t change the world.
+
+Across Africa, we observed founders with powerful ideas but limited access to mentorship, tools, and structured support. Traditional models were either inaccessible, theoretical, or disconnected from real business outcomes.
+
+Impactpreneur Global exists to change that by providing practical, founder-centric support that turns ideas into businesses and businesses into engines of impact."
                   imageUrl="/images/slide1.png"
                   imageRight={true}
                 //   isButton={true}
                 />
            <ImageTextSection
-                  badgeText="OUR MISSION"
+                  badgeText="MISSION & VISION"
                   // title="Transform Your Workflow"
-                  body="Impactpreneur Global is a youth-focused, mission-driven organization committed to equipping young people across Africa (and beyond) with entrepreneurial skills, leadership capabilities, and financial literacy. We believe that knowledge + opportunity = impact, and our goal is to make education and empowerment accessible to all."
+                  body="Our Mission
+To democratize entrepreneurship by enabling African entrepreneurs and businesses to move from ideation to sustainable execution through accessible, actionable, and globally relevant support.
+
+Our Vision
+A world where every idea for good regardless of origin is met with mentorship, visibility, and strategic support, and where Africa stands as a global hub for inclusive innovation."
                   imageUrl="/images/slide1.png"
                 //   imageRight={true}
                 //   isButton={true}
@@ -113,7 +91,7 @@ export default function About(){
 
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center items-stretch mt-8">
-         {profileCards.map((profile) => (
+         {profileData.map((profile) => (
             <ProfileCard
               key={profile.name} // Use name as key if it's unique
               name={profile.name}
@@ -128,7 +106,9 @@ export default function About(){
            <JoinCommunity
                   badgeText="OUR COMMUNITY"
                   title="Join Our Community"
-                  body="Our journey started with a clear vision: create a world where success isn’t reserved for a few, but is available to anyone with the passion to build. Through training programs, leadership labs, and community-building initiatives, Impactpreneur Global has grown into a powerful ecosystem. As we scale, we are expanding our offerings to include digital products — e-books, courses, and guides — so learners can access high-quality material on demand."
+                  body="Impactpreneur Global is home to a growing community of entrepreneurs, founders, business leaders, and innovators committed to building Africa’s future.
+
+Through programs, digital products, and collaborative spaces, we enable learning, partnership, and long-term growth."
                   imageUrl="/images/slide1.png"
                 //   imageRight={true}
                   isButton={true}

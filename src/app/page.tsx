@@ -11,6 +11,9 @@ import { TestimonialCarouselSection } from "../components/blocks/TestimonialCard
 import { SponsorSection } from "@/src/components/common/SponsorSection";
 import { GeneralLayout } from "@/src/components/common/GeneralLayout";
 import Link from "next/link";
+import profileData from "@/src/ProfileData";
+import  BlogData  from "@/src/BlogData"
+
 
 export default function Home() {
   // JSON data for feature cards
@@ -19,27 +22,25 @@ export default function Home() {
       id: 1,
       imageUrl: "/images/slide1.png",
       // title: "Fast Delivery",
-      body: "Entrepreneurship Training: From idea validation to business modeling and digital marketing.",
-      badgeText: "New",
+      body: "Mentorship & Bootcamps, Structured mentorship programs and immersive bootcamps guide entrepreneurs and business leaders through ideation, purpose alignment, and growth strategies, providing actionable steps to turn ideas into sustainable, revenue-generating ventures.",
     },
     {
       id: 2,
       imageUrl: "/images/slide1.png",
       // title: "Sustainable Packaging",
-      body: "Leadership Development: Immersive labs, coaching, peer mentoring — building strong, purpose-led leaders.",
-      badgeText: "Eco",
+      body: "Digital Learning & Resources, Our courses, guides, and eBooks deliver practical, step-by-step learning for founders and businesses, covering entrepreneurship, leadership, financial mastery, and digital growth, ensuring knowledge can be applied immediately.",
     },
     {
       id: 3,
       imageUrl: "/images/slide1.png",
       // title: "Expert Support",
-      body: "At Impactprenuer Global, we bring together aspiring social entrepreneurs, nonprofits, and changemakers.",
+      body: "Consulting & Strategic Services, We offer tailored consulting, project management, and business advisory for startups and established ventures, helping them optimize operations, scale efficiently, and align purpose with profit.",
     },
     {
       id: 4,
       imageUrl: "/images/slide1.png",
       // title: "Expert Support",
-      body: "Financial Literacy: Workshops on budgeting, investing, debt management, and using digital financial tools.",
+      body: "Community & Collaboration, Impactpreneur Global unites founders, innovators, and changemakers in a dynamic ecosystem where networking, collaboration, and knowledge-sharing accelerate both business growth and social impact.",
     },
   ];
 
@@ -284,56 +285,7 @@ const blogPosts = [
 
 
 
-const profileCards = [
-  {
-    id: 1,
-    name: "Promise Joshua",
-    title: "Co-founder & Global Community Architect",
-    imageUrl: "/images/profile1.jpg",
-    socialLinks: {
-      twitter: "https://twitter.com/janedoe",
-      linkedin: "https://linkedin.com/in/janedoe",
-      github: "https://github.com/janedoe",
-    },
-  },
-  {
-    id: 2,
-    name: "George Bassey",
-    title: "Co-founder & Global Business Architect",
-    imageUrl: "/images/profile4.jpg",
-    socialLinks: {
-      twitter: "https://twitter.com/johnsmith",
-      linkedin: "https://linkedin.com/in/johnsmith",
-      github: "https://github.com/johnsmith",
-    },
-  },
-  {
-    id: 3,
-    name: "Alice Johnson",
-    title: "Marketing Head",
-    imageUrl: "/images/profile3.jpg",
-  },
-  {
-    id: 4,
-    name: "Charles Horice",
-    title: "Head of Technology",
-    imageUrl: "/images/profile2.jpg",
-    socialLinks: {
-      linkedin: "https://linkedin.com/in/bobwilliams",
-    },
-  },
-  {
-    id: 5,
-    name: "Chukwuchebem David",
-    title: "Tech Specialist",
-    imageUrl: "/images/profile5.jpeg",
-    socialLinks: {
-      twitter: "https://twitter.com/johnsmith",
-      linkedin: "https://linkedin.com/in/johnsmith",
-      github: "https://github.com/johnsmith",
-    },
-  }
-];
+
 
   return (
     <GeneralLayout>
@@ -344,8 +296,8 @@ const profileCards = [
       <div className="">
         <ImageTextSection
           badgeText="WHO WE ARE"
-          body="Impactpreneur Global is a youth-focused, mission-driven organization committed to equipping young people across Africa (and beyond) with entrepreneurial skills, leadership capabilities, and financial literacy. We believe that knowledge + opportunity = impact, and our goal is to make education and empowerment accessible to all."
-          imageUrl="/images/slide1.png"
+          body="Impactpreneur Global is a purpose-driven business ecosystem supporting entrepreneurs and companies at different stages of growth. We are not an NGO. We are not a motivational brand. We are a venture-building platform focused on execution, sustainability, and measurable impact."
+          imageUrl="/images/carousel1.jpg"
           isButton={true}
         />
       </div>
@@ -357,7 +309,7 @@ const profileCards = [
             </Badge>
         
              <h1 className="text-[24px] sm:text-[28px] font-dm-sans text-white font-bold">
-              Empowering Change Through Purpose, Innovation & <br /> Education
+              Empowering African Entrepreneurs & Businesses to Build, Scale, and Lead Impactful  <br /> Ventures
             </h1>
         
         <div className="max-w-7xl place-items-center mx-auto grid  pt-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -451,7 +403,7 @@ const profileCards = [
 
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center items-stretch mt-8">
-         {profileCards.map((profile) => (
+         {profileData.map((profile) => (
         <ProfileCard
           key={profile.name} // Use name as key if it's unique
           name={profile.name}

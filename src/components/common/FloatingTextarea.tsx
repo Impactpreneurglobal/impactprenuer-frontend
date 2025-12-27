@@ -19,7 +19,7 @@ export function FloatingTextarea({
         onChange={onChange}
         placeholder=" "
         rows={4}
-        className="peer w-full rounded-md border border-[#4CAF50] bg-transparent px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#4CAF50]/30 resize-none"
+        className="peer w-full rounded-md border border-[#4CAF50] bg-transparent px-4 py-3 h-45 text-sm outline-none focus:ring-2 focus:ring-[#4CAF50]/30 resize-none"
       />
 
       <label

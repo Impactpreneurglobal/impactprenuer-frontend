@@ -11,7 +11,7 @@ import { Badge } from "@/src/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import ProfileCard from "@/src/components/common/ProfileCard";
 import { GeneralLayout } from "@/src/components/common/GeneralLayout";
-
+import profileData from "@/src/ProfileData";
 import {
   Pagination,
   PaginationContent,
@@ -22,137 +22,18 @@ import {
   PaginationEllipsis,
 } from "@/src/components/ui/pagination"
 
-const profileCards = [
-  {
-    id: 1,
-    name: "Promise Joshua",
-    title: "Co-founder & Global Community Architect",
-    imageUrl: "/images/profile1.jpg",
-    socialLinks: {
-      twitter: "https://twitter.com/janedoe",
-      linkedin: "https://linkedin.com/in/janedoe",
-      github: "https://github.com/janedoe",
-    },
-  },
-  {
-    id: 2,
-    name: "George Bassey",
-    title: "Co-founder & Global Business Architect",
-    imageUrl: "/images/profile4.jpg",
-    socialLinks: {
-      twitter: "https://twitter.com/johnsmith",
-      linkedin: "https://linkedin.com/in/johnsmith",
-      github: "https://github.com/johnsmith",
-    },
-  },
-  {
-    id: 3,
-    name: "Alice Johnson",
-    title: "Marketing Head",
-    imageUrl: "/images/profile3.jpg",
-  },
-  {
-    id: 4,
-    name: "Charles Horice",
-    title: "Head of Technology",
-    imageUrl: "/images/profile2.jpg",
-    socialLinks: {
-      linkedin: "https://linkedin.com/in/bobwilliams",
-    },
-  },
-  {
-    id: 5,
-    name: "Chukwuchebem David",
-    title: "Tech Specialist",
-    imageUrl: "/images/profile5.jpeg",
-    socialLinks: {
-      twitter: "https://twitter.com/johnsmith",
-      linkedin: "https://linkedin.com/in/johnsmith",
-      github: "https://github.com/johnsmith",
-    },
-  },
-  {
-    id: 6,
-    name: "Sarah Wilson",
-    title: "Community Manager",
-    imageUrl: "/images/profile1.jpg",
-    socialLinks: {
-      twitter: "https://twitter.com/sarahwilson",
-      linkedin: "https://linkedin.com/in/sarahwilson",
-    },
-  },
-  {
-    id: 7,
-    name: "Michael Brown",
-    title: "Program Director",
-    imageUrl: "/images/profile2.jpg",
-    socialLinks: {
-      linkedin: "https://linkedin.com/in/michaelbrown",
-    },
-  },
-  {
-    id: 8,
-    name: "Emma Davis",
-    title: "Content Strategist",
-    imageUrl: "/images/profile3.jpg",
-    socialLinks: {
-      twitter: "https://twitter.com/emmadavis",
-      linkedin: "https://linkedin.com/in/emmadavis",
-      github: "https://github.com/emmadavis",
-    },
-  },
-  {
-    id: 9,
-    name: "James Wilson",
-    title: "Outreach Coordinator",
-    imageUrl: "/images/profile4.jpg",
-    socialLinks: {
-      twitter: "https://twitter.com/jameswilson",
-      linkedin: "https://linkedin.com/in/jameswilson",
-    },
-  },
-  {
-    id: 10,
-    name: "Olivia Martinez",
-    title: "Partnership Manager",
-    imageUrl: "/images/profile5.jpeg",
-    socialLinks: {
-      linkedin: "https://linkedin.com/in/oliviamartinez",
-    },
-  },
-  {
-    id: 11,
-    name: "David Taylor",
-    title: "Operations Lead",
-    imageUrl: "/images/profile1.jpg",
-    socialLinks: {
-      twitter: "https://twitter.com/davidtaylor",
-      linkedin: "https://linkedin.com/in/davidtaylor",
-    },
-  },
-  {
-    id: 12,
-    name: "Sophia Anderson",
-    title: "Impact Analyst",
-    imageUrl: "/images/profile2.jpg",
-    socialLinks: {
-      twitter: "https://twitter.com/sophiaanderson",
-      linkedin: "https://linkedin.com/in/sophiaanderson",
-      github: "https://github.com/sophiaanderson",
-    },
-  },
-];
+
 
 const ITEMS_PER_PAGE = 8 // Show 4 team members per page
 
 export default function OurTeam() {
   const [currentPage, setCurrentPage] = useState(1)
-  const totalPages = Math.ceil(profileCards.length / ITEMS_PER_PAGE)
+  const totalPages = Math.ceil(profileData.length / ITEMS_PER_PAGE)
   
   // Calculate which items to show based on current page
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE
   const endIndex = startIndex + ITEMS_PER_PAGE
-  const currentProfiles = profileCards.slice(startIndex, endIndex)
+  const currentProfiles = profileData.slice(startIndex, endIndex)
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page)
@@ -320,7 +201,7 @@ export default function OurTeam() {
 
           {/* Optional: Show current page and total results */}
           <div className="mt-6 text-center text-sm text-gray-600">
-            Showing {startIndex + 1} - {Math.min(endIndex, profileCards.length)} of {profileCards.length} team members
+            Showing {startIndex + 1} - {Math.min(endIndex, profileData.length)} of {profileData.length} team members
           </div>
 
           {/* Mobile button - visible only on mobile (optional) */}
