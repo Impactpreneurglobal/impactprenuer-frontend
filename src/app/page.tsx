@@ -10,6 +10,7 @@ import { BlogCard } from "../components/common/BlogCard";
 import { TestimonialCarouselSection } from "../components/blocks/TestimonialCard";
 import { SponsorSection } from "@/src/components/common/SponsorSection";
 import { GeneralLayout } from "@/src/components/common/GeneralLayout";
+import Link from "next/link";
 
 export default function Home() {
   // JSON data for feature cards
@@ -377,7 +378,7 @@ const profileCards = [
           {/* Left */}
           <div className="space-y-2">
             <Badge variant="muted" className="w-fit">
-              HIGHLIGHTS
+              PROGRAMS
             </Badge>
 
             <h1 className="text-[24px] sm:text-[28px] font-dm-sans text-[#003715] font-bold">
@@ -388,10 +389,12 @@ const profileCards = [
 
           {/* Right - hidden on mobile */}
           <div className="hidden sm:flex">
+            <Link href="/programs">
             <Button variant="ghost" className="flex items-center gap-1">
               See all
               <ArrowRight className="h-4 w-4" />
             </Button>
+            </Link>
           </div>
         </div>
 
@@ -435,10 +438,14 @@ const profileCards = [
 
           {/* Right - hidden on mobile */}
           <div className="hidden sm:flex">
+            <div className="hidden sm:flex">
+            <Link href="/our-team">
             <Button variant="ghost" className="flex items-center gap-1">
               See all
               <ArrowRight className="h-4 w-4" />
             </Button>
+            </Link>
+          </div>
           </div>
         </div>
 
@@ -471,10 +478,12 @@ const profileCards = [
 
           {/* Right - hidden on mobile */}
           <div className="hidden sm:flex">
+             <Link href="/blogs">
             <Button variant="ghost" className="flex items-center gap-1">
               See all
               <ArrowRight className="h-4 w-4" />
             </Button>
+            </Link>
           </div>
         </div>
 
@@ -494,10 +503,12 @@ const profileCards = [
 
         {/* Mobile button - visible only on mobile */}
         <div className="mt-8 flex justify-center sm:hidden">
-          <Button variant="ghost" className="flex items-center gap-1">
-            See all
-            <ArrowRight className="h-4 w-4" />
-          </Button>
+          <Link href="/blogs">
+            <Button variant="ghost" className="flex items-center gap-1">
+              See all
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+            </Link>
         </div>
       </section>
 

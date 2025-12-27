@@ -11,7 +11,7 @@ import { FeatureCard } from "@/src/components/blocks/FeatureCard";
 import {ProgramCard} from "@/src/components/common/ProgramCard";
 import { Badge } from "@/src/components/ui/badge";
 import { ArrowRight } from "lucide-react";
- 
+import Link from "next/link";
 
 const profileCards = [
   {
@@ -89,21 +89,20 @@ export default function TeamDetailPage(){
          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           {/* Left */}
           <div className="space-y-2">
-            <Badge variant="muted" className="w-fit">
-              OUR TEAM
-            </Badge>
 
-            <h1 className="text-[24px] sm:text-[28px] font-dm-sans text-[#003715] font-bold">
-              Meet Our Team
+            <h1 className="text-[20px] sm:text-[20px] font-dm-sans text-[#8A8A8A] font-normal">
+              More team members
             </h1>
           </div>
 
           {/* Right - hidden on mobile */}
           <div className="hidden sm:flex">
+            <Link href="/our-team">
             <Button variant="ghost" className="flex items-center gap-1">
               See all
               <ArrowRight className="h-4 w-4" />
             </Button>
+            </Link>
           </div>
         </div>
 

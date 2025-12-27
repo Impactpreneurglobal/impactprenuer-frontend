@@ -143,7 +143,7 @@ const profileCards = [
   },
 ];
 
-const ITEMS_PER_PAGE = 4 // Show 4 team members per page
+const ITEMS_PER_PAGE = 8 // Show 4 team members per page
 
 export default function OurTeam() {
   const [currentPage, setCurrentPage] = useState(1)
