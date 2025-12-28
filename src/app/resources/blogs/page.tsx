@@ -95,7 +95,13 @@ export default function Blogs() {
         <HeroSection
           badgeText="BLOGS"
           title="Our Blogs"
-          body="Explore Impactprenuer Global's transformative programs built to empower individuals, nonprofits, and social entrepreneurs with practical skills, mentorship, and tools for long-term impact. From leadership development to capacity-building workshops and community-driven initiatives, our programs are shaping a new generation of purpose-driven African changemakers."
+          body="
+The #1 Resource for Entrepreneurs and Business Leaders Across the Globe Ready to Turn Ideas Into Impact and Revenue
+
+Welcome to Impactpreneur Global’s blog, your hub for actionable insights, practical strategies, and bold ideas that help founders and businesses worldwide build, scale, and lead business ventures. 
+
+Whether you’re just starting out, expanding regionally, or scaling internationally, our content equips you with the knowledge, tools, and inspiration to transform ideas into profitable, sustainable businesses.
+"
           imageUrl="images/slide1.png"
         />
         

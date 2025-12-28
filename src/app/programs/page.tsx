@@ -216,7 +216,12 @@ export default function Programs() {
         <HeroSection
           badgeText="PROGRAMS"
           title="Programs Designed to Unlock Potential and Drive Real Change"
-          body="Explore Impactprenuer Global's transformative programs built to empower individuals, nonprofits, and social entrepreneurs with practical skills, mentorship, and tools for long-term impact. From leadership development to capacity-building workshops and community-driven initiatives, our programs are shaping a new generation of purpose-driven African changemakers."
+          body="Global Programs & Services Empowering Entrepreneurs and Businesses to Turn Ideas Into Impact and Revenue
+
+At Impactpreneur Global, we deliver transformative programs and services designed to help entrepreneurs, startups, and businesses innovate, scale, and lead purpose-driven ventures worldwide.
+
+Whether you are refining your first idea, scaling an existing business, or leading a global team, our offerings equip you with practical skills, mentorship, strategic guidance, and digital tools to succeed in any market. We combine impact, profit, and innovation to ensure every venture thrives sustainably.
+"
           imageUrl="images/slide1.png"
         />
         
