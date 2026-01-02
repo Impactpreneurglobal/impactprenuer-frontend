@@ -23,7 +23,7 @@ export function ProgramCard({
   ctaHref = "#",
 }: ProgramCardProps) {
   return (
-    <Card className="overflow-hidden rounded-xl flex flex-col max-w-[300px] border-none shadow-none">
+    <Card className="overflow-hidden rounded-xl flex flex-col max- w-[300px] border-none shadow-none">
       <CardHeader className="mb-[-50px] p-0">
         {/* Image */}
         <div className="relative w-full h-[140px]">
