@@ -3,6 +3,7 @@ const BlogData = [
     id: 1,
     title: "Young Investors: A Guide to Financial Freedom",
     date: "28 October, 2025",
+    name: "John Micheal",
     subtitle:
       "Learn how young people can start their investment journey with practical tips and strategies.",
     body: `
@@ -29,7 +30,7 @@ const BlogData = [
   </p>
 
   <ul>
-    <li>Having control over your finances</li>
+    <li>Having control over your communitys</li>
     <li>Being able to save and invest consistently</li>
     <li>Not living paycheck to paycheck</li>
     <li>Preparing for the future with confidence</li>
@@ -184,10 +185,10 @@ const BlogData = [
   </p>
 </article>
 `,
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/young-investors-guide",
-    category: "Finance",
+    category: "Community",
     readTime: "5 min read",
   },
   {
@@ -220,7 +221,7 @@ const BlogData = [
   </p>
 
   <ul>
-    <li>Having control over your finances</li>
+    <li>Having control over your communitys</li>
     <li>Being able to save and invest consistently</li>
     <li>Not living paycheck to paycheck</li>
     <li>Preparing for the future with confidence</li>
@@ -375,10 +376,10 @@ const BlogData = [
   </p>
 </article>
 `,
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/leadership-modern-world",
-    category: "Leadership",
+    category: "Impact Stories",
     readTime: "7 min read",
   },
   {
@@ -388,10 +389,10 @@ const BlogData = [
     subtitle:
       "Turn your innovative ideas into viable businesses with this comprehensive guide.",
     body: "",
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/idea-to-startup-guide",
-    category: "Entrepreneurship",
+    category: "Impact Stories",
     readTime: "10 min read",
   },
   {
@@ -401,23 +402,23 @@ const BlogData = [
     subtitle:
       "Essential money management skills everyone should know regardless of age or income.",
     body: "",
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/financial-literacy-all-ages",
-    category: "Finance",
+    category: "Community",
     readTime: "6 min read",
   },
   {
     id: 5,
-    title: "The Future of Technology Innovation",
+    title: "The Future of Scaling Innovation",
     date: "12 February, 2026",
     subtitle:
       "Discover emerging technologies that will shape our future and how to prepare for them.",
     body: "",
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
-    // ctaHref: "/blogs/future-technology-innovation",
-    category: "Technology",
+    // ctaHref: "/blogs/future-Scaling-innovation",
+    category: "Scaling",
     readTime: "8 min read",
   },
   {
@@ -427,10 +428,10 @@ const BlogData = [
     subtitle:
       "Practical techniques to enhance creativity and apply it to problem-solving.",
     body: "",
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/unlocking-creative-potential",
-    category: "Creativity",
+    category: "Impact Stories",
     readTime: "4 min read",
   },
   {
@@ -440,10 +441,10 @@ const BlogData = [
     subtitle:
       "Develop the mindset needed to overcome challenges and build successful ventures.",
     body: "",
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/entrepreneur-mindset",
-    category: "Entrepreneurship",
+    category: "Impact Stories",
     readTime: "9 min read",
   },
   {
@@ -453,10 +454,10 @@ const BlogData = [
     subtitle:
       "Stay ahead of the curve with the latest digital marketing trends and strategies.",
     body: "",
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/digital-marketing-trends-2026",
-    category: "Marketing",
+    category: "Community",
     readTime: "7 min read",
   },
   {
@@ -466,10 +467,10 @@ const BlogData = [
     subtitle:
       "Learn how to create businesses that are profitable, sustainable, and socially responsible.",
     body: "",
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/building-sustainable-businesses",
-    category: "Sustainability",
+    category: "Scaling",
     readTime: "11 min read",
   },
   {
@@ -479,10 +480,10 @@ const BlogData = [
     subtitle:
       "Maximize productivity and maintain work-life balance while working remotely.",
     body: "",
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/remote-work-best-practices",
-    category: "Work",
+    category: "Impact Stories",
     readTime: "6 min read",
   },
   {
@@ -492,10 +493,10 @@ const BlogData = [
     subtitle:
       "Understanding how artificial intelligence is transforming the job market and how to adapt.",
     body: "",
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/ai-impact-employment",
-    category: "Technology",
+    category: "Scaling",
     readTime: "12 min read",
   },
   {
@@ -505,7 +506,7 @@ const BlogData = [
     subtitle:
       "Effective ways to build and engage communities around your brand or cause.",
     body: "",
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/community-building-strategies",
     category: "Community",
@@ -518,10 +519,10 @@ const BlogData = [
     subtitle:
       "Create a personalized plan for continuous growth and self-improvement.",
     body: "",
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/personal-development-roadmap",
-    category: "Personal Growth",
+    category: "Community",
     readTime: "5 min read",
   },
   {
@@ -531,10 +532,10 @@ const BlogData = [
     subtitle:
       "Understand how social media algorithms work and how to optimize your content.",
     body: "",
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/social-media-algorithms",
-    category: "Marketing",
+    category: "Impact Stories",
     readTime: "9 min read",
   },
   {
@@ -544,10 +545,10 @@ const BlogData = [
     subtitle:
       "Build meaningful professional relationships that can advance your career or business.",
     body: "",
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/power-of-networking",
-    category: "Career",
+    category: "Scaling",
     readTime: "6 min read",
   },
   {
@@ -557,10 +558,10 @@ const BlogData = [
     subtitle:
       "Essential strategies for maintaining mental wellbeing while building a business.",
     body: "",
-      imageUrl: "/images/slide1.png",
+      imageUrl: "/images/Blog.png",
     // ctaText: "Read more",
     // ctaHref: "/blogs/mental-health-entrepreneurs",
-    category: "Wellness",
+    category: "Scaling",
     readTime: "10 min read",
   },
 ]

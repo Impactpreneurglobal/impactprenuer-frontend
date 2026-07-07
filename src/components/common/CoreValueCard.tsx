@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader } from "@/src/components/ui/card"
 import Link from "next/link"
 import { LucideIcon } from "lucide-react"
 
-export interface ProgramCardProps {
+export interface CoreValuesProps {
   // id: string | number
   title?: string
   date?: string
@@ -18,7 +18,7 @@ export interface ProgramCardProps {
 }
 
 
-export function ProgramCard({
+export function CoreValueCard({
   
   imageUrl = "/images/slide1.png",
   title = "Young Investors",
@@ -29,7 +29,7 @@ export function ProgramCard({
   Icon,
   iconBgColor,
   iconColor
-}: ProgramCardProps) {
+}: CoreValuesProps) {
   return (
     <Card className="overflow-hidden rounded-xl flex flex-col max-w-[262px] border-none shadow">
 

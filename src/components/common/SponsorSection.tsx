@@ -15,13 +15,14 @@ export function SponsorSection({ sponsors }: SponsorSectionProps) {
       
       {/* Heading */}
       <div className="text-center mb-12">
+        <p className="text-[17px] text-[#000000]">TRUSTED BY LEADING ORGANIZATIONS</p>
         <h2 className="text-[22px] sm:text-[28px] lg:text-[32px] font-dm-sans font-bold text-[#004119]">
-          Sponsors and Partners
+          Our Partners & Supporters
         </h2>
       </div>
 
       {/* Logos */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-8 items-center justify-items-center">
         {sponsors.map((sponsor, index) => (
           <div
             key={index}
@@ -37,6 +38,10 @@ export function SponsorSection({ sponsors }: SponsorSectionProps) {
           </div>
         ))}
       </div>
-    </section>
+       <div className="flex items-center justify-center mt-2">
+        <p className="font-dm-sans text-[17px]">Join a network of innovative organizations making an impact</p>
+
+      </div> 
+     </section>
   )
 }

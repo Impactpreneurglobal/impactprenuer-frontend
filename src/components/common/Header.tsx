@@ -27,11 +27,11 @@ export function Header() {
   const [resourcesOpen, setResourcesOpen] = React.useState(false)
 
   return (
-    <div className="fixed top-0 left-0 z-50 w-full bg-white shadow-md">
-      <div className="flex items-center justify-between px-4 py-3">
+    <div className="fixed top-0 left-0 z-50 w-full flex items-center justify-center bg-white shadow-md">
+      <div className="flex items-center w-[90%] justify-between px-4 py-3">
         {/* Logo */}
         <Link href="/">
-          <Image src="/logo.png" alt="Logo" width={50} height={50} />
+          <Image src="/logo3.png" alt="Logo" width={35} height={35} />
         </Link>
 
         {/* Desktop Navigation */}
@@ -40,16 +40,16 @@ export function Header() {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="/about">About</Link>
+                  <Link href="/howItWorks">How It Works</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="/programs">Programs</Link>
+                  <Link href="/blog">Blogs</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
-
+{/* 
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -57,7 +57,7 @@ export function Header() {
                     <li>
                       <NavigationMenuLink asChild>
                         <Link href="/resources/blogs">
-                          <div className="font-medium">Blog</div>
+                          <div className="font-medium">Event</div>
                           <p className="text-sm text-muted-foreground">
                             Thoughtful articles on impact-driven ventures.
                           </p>
@@ -66,17 +66,29 @@ export function Header() {
                     </li>
                   </ul>
                 </NavigationMenuContent>
-              </NavigationMenuItem>
+              </NavigationMenuItem> */}
+
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="/our-team">Our Team</Link>
+                  <Link href="/event">Event</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="/contact">Contact</Link>
+                  <Link href="/productServices">Product/Services</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/about">About Us</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/contact">Contact Us</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -86,7 +98,7 @@ export function Header() {
         {/* Right Actions */}
         <div className="flex items-center gap-2">
           <Button className="hidden md:inline-flex">
-            Join Our Community
+            Join Now
           </Button>
 
           <button
@@ -162,7 +174,7 @@ export function Header() {
             Contact
           </Link>
 
-          <Button className="mt-4">Join Our Community</Button>
+          <Button className="mt-4">Join Now</Button>
         </nav>
       </aside>
     </div>

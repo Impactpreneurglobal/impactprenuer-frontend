@@ -8,6 +8,7 @@ interface FeatureCardProps {
   title?: string;
   body: string;
   badgeText?: string;
+
 }
 
 export function FeatureCard({
@@ -15,6 +16,7 @@ export function FeatureCard({
   title,
   body,
   badgeText,
+  
 }: FeatureCardProps) {
   return (
     <Card className="overflow-hidden rounded-xl shadow-md pt-0 flex flex-col max-w-[300px] h-[310px]">
