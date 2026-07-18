@@ -3,10 +3,11 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from "@/src/components/ui/button";
+import Link from 'next/link';
 
-// Interfaces for the nested data mapping structure
+
 export interface SubItem {
-  id: string; // e.g., "01", "02"
+  id: string; 
   title: string;
   description: string;
   buttonText: string;
@@ -16,8 +17,8 @@ export interface AccordionItemProps {
   id: string | number;
   title: string;
   badgeText: string;
-  badgeColorClass: string; // e.g., "bg-green-50 text-green-600"
-  iconBgClass: string;     // e.g., "bg-green-50 text-green-600"
+  badgeColorClass: string; 
+  iconBgClass: string;     
   icon: React.ReactNode;
   description: string;
   subItems: SubItem[];
@@ -37,13 +38,11 @@ export const ServiceAccordion: React.FC<AccordionItemProps> = ({
   return (
     <div className="w-full bg-white border border-gray-100 rounded-3xl p-6 mb-4 shadow-sm transition-all duration-200">
       
-      {/* Clickable Header Row Toggle */}
       <div 
         className="flex items-start justify-between cursor-pointer gap-4"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex gap-4 items-start">
-          {/* Main Decorative Icon Container */}
           <div className={`p-3 rounded-xl flex-shrink-0 ${iconBgClass}`}>
             {icon}
           </div>
@@ -61,13 +60,11 @@ export const ServiceAccordion: React.FC<AccordionItemProps> = ({
           </div>
         </div>
 
-        {/* Chevron Dropdown Toggle Indicator Icon */}
         <div className="text-gray-400 p-1 hover:bg-gray-50 rounded-full flex-shrink-0 mt-1">
           {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
         </div>
       </div>
 
-      {/* Accordion Content Body Layout Wrapper */}
       {isOpen && (
         <div className="mt-6 border-t border-gray-100 pt-2 space-y-6">
           {subItems.map((sub, index) => (
@@ -75,10 +72,8 @@ export const ServiceAccordion: React.FC<AccordionItemProps> = ({
               key={sub.id} 
               className={`pt-6 flex flex-col gap-3 ${index !== subItems.length - 1 ? 'border-b border-gray-100 pb-6' : ''}`}
             >
-              {/* Top Row: Indicator & Title vs Button Layout Line */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  {/* Circle Step Number Badge */}
                   <span className="w-7 h-7 bg-green-50 text-green-700 text-xs font-bold rounded-full flex items-center justify-center flex-shrink-0">
                     {sub.id}
                   </span>
@@ -87,12 +82,14 @@ export const ServiceAccordion: React.FC<AccordionItemProps> = ({
                   </h4>
                 </div>
                 
+                <Link href="/productServices/requestServices/">
+                
                 <Button className="bg-green-600 hover:bg-green-700 text-white rounded-lg text-xs font-semibold px-4 py-2 h-9 self-start sm:self-auto">
                   {sub.buttonText}
                 </Button>
+                </Link>
               </div>
 
-              {/* Sub-item Inner Description Content Block */}
               <p className="text-gray-500 text-sm max-w-3xl pl-10 leading-relaxed">
                 {sub.description}
               </p>

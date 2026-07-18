@@ -97,9 +97,12 @@ export function Header() {
 
         {/* Right Actions */}
         <div className="flex items-center gap-2">
+          <Link href="/join">
+          
           <Button className="hidden md:inline-flex">
             Join Now
           </Button>
+          </Link>
 
           <button
             className="md:hidden p-2 rounded-md hover:bg-gray-100"

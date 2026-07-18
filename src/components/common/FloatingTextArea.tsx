@@ -1,38 +1,35 @@
 import React from 'react';
 
-interface FloatingInputProps {
+interface FloatingTextAreaProps {
   label: string;
   name: string;
-  type?: string;
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-export function FloatingInput({
+export function FloatingTextarea({
   label,
   name,
-  type = "text",
   value,
   onChange,
-}: FloatingInputProps) {
+}: FloatingTextAreaProps) {
   return (
     <div className="relative">
-      <input
-        type={type}
+      <textarea
         name={name}
         value={value}
         onChange={onChange}
         placeholder=" "
+        rows={4}
         required
-        className="peer w-full rounded-xl border border-gray-200 bg-transparent px-4 py-3.5 text-sm outline-none transition-all focus:border-[#4CAF50] focus:ring-2 focus:ring-[#4CAF50]/10"
+        className="peer w-full rounded-xl border border-gray-200 bg-transparent px-4 py-3.5 text-sm outline-none transition-all focus:border-[#4CAF50] focus:ring-2 focus:ring-[#4CAF50]/10 resize-none"
       />
 
       <label
         className="
-          pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-sm text-gray-400 transition-all duration-200
-          peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
+          pointer-events-none absolute left-4 top-5 text-sm text-gray-400 transition-all duration-200
+          peer-placeholder-shown:top-5 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
           peer-focus:top-0 peer-focus:text-xs peer-focus:text-[#2e7d32] peer-focus:bg-white peer-focus:px-2
-          input-has-value:top-0
         "
         style={{
           top: value ? '0px' : '',

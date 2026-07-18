@@ -1,49 +1,54 @@
 // components/FeatureCard.tsx
 import React from "react";
 import { Card } from "@/src/components/ui/card";
-import { Badge } from "@/src/components/ui/badge";
+import { UserPlus, Target, Rocket, Award, LucideIcon } from "lucide-react";
 
 interface FeatureCardProps {
-  imageUrl: string;
   title?: string;
   body: string;
-  badgeText?: string;
-
+  stepNumber: string; // e.g. "01", "02"
+  iconType: "user" | "target" | "rocket" | "scale"; 
 }
 
 export function FeatureCard({
-  imageUrl,
   title,
   body,
-  badgeText,
-  
+  stepNumber,
+  iconType,
 }: FeatureCardProps) {
+  
+  // Map icon types to Lucide Icons
+  const icons: Record<string, LucideIcon> = {
+    user: UserPlus,
+    target: Target,
+    rocket: Rocket,
+    scale: Award,
+  };
+
+  const IconComponent = icons[iconType] || UserPlus;
+
   return (
-    <Card className="overflow-hidden rounded-xl shadow-md pt-0 flex flex-col max-w-[300px] h-[310px]">
-      {/* Image */}
-      <div className="relative w-full h-[140px]">
-        <img
-          src={imageUrl}
-          alt={title ?? "feature image"}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+    <Card className="relative overflow-visible rounded-[20px] border border-gray-100 bg-white p-6 pt-8 flex flex-col max-w-[260px] min-h-[220px] shadow-sm text-left">
+      
+      {/* Floating step number badge at top-left boundary */}
+      <div className="absolute -top-3.5 left-6 bg-[#dcfce7] text-[#15803d] text-xs font-bold px-2.5 py-1 rounded-full border border-[#bbf7d0]">
+        {stepNumber}
+      </div>
+
+      {/* Styled icon container matching design */}
+      <div className="w-12 h-12 rounded-[12px] bg-[#f2fbf5] flex items-center justify-center mb-5 mt-1 border border-[#e2f7ea]">
+        <IconComponent className="w-5 h-5 text-[#00801a]" />
       </div>
 
       {/* Text content */}
-      <div className="p-3 space-y-1 text-left flex-1">
-        {badgeText && (
-          <Badge variant="secondary" className="w-fit text-xs">
-            {badgeText}
-          </Badge>
-        )}
-
+      <div className="space-y-2 flex-1">
         {title && (
-          <h3 className="text-base font-semibold text-[#004119]">
+          <h3 className="text-[16px] font-bold text-[#0f172a] tracking-tight">
             {title}
           </h3>
         )}
 
-        <p className="text-muted-foreground text-xs sm:text-sm">
+        <p className="text-gray-500 text-[13px] leading-relaxed">
           {body}
         </p>
       </div>

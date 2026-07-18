@@ -7,7 +7,7 @@ import { Badge } from "@/src/components/ui/badge";
 import { Users, MessageSquare, Calendar, TrendingUp, ArrowRight } from "lucide-react";
 import ProfileCard from "@/src/components/common/ProfileCard";
 import { BlogCard } from "../components/common/BlogCard";
-import { SponsorSection } from "@/src/components/common/SponsorSection";
+import SponsorSection  from "@/src/components/common/SponsorSection";
 import { GeneralLayout } from "@/src/components/common/GeneralLayout";
 import Link from "next/link";
 import profileData from "@/src/ProfileData";
@@ -17,32 +17,31 @@ import  CtaSection from "../components/blocks/CtaSection";
 
 
 export default function Home() {
-  // JSON data for feature cards
   const whatWeDoCards = [
     {
       id: 1,
-      imageUrl: "/images/slide1.png",
+      stepNumber: "01",
       title: "Expertise Mentorship",
       body: "Connect with seasoned entrepreneurs and industry leaders who guide your journey to success.",
       
     },
     {
       id: 2,
-      imageUrl: "/images/slide1.png",
+      stepNumber: "02",
       title: "Exclusive Events",
       body: "Access masterclasses, workshops, and networking events designed to accelerate your growth.",
       
     },
     {
       id: 3,
-      imageUrl: "/images/slide1.png",
+      stepNumber: "03",
       title: "Strategic Partnerships",
       body: "Access masterclasses, workshops, and networking events designed to accelerate your growth.",
       
     },
     {
       id: 4,
-      imageUrl: "/images/slide1.png",
+      stepNumber: "04",
       title: "Growth Resources",
       body: "Leverage tools, frameworks, and insights to scale your impact venture sustainably.",
       
@@ -136,7 +135,6 @@ export default function Home() {
     },
   ];
 
-  // Array containing the structured testimonial data matching your interface props
   const testimonialData = [
     {
       rating: 5,
@@ -166,7 +164,6 @@ export default function Home() {
       <main className="">
         <CarouselCard />
 
-        {/* Feature Cards Section */}
         <section className=" py-16 px-4 sm:px-6 lg:px-20 flex flex-col justify-center items-center">
           <div className="flex flex-col items-center justify-center text-center gap-4 mb-8">
             <Badge variant="muted" className="w-fit rounded-full">
@@ -181,16 +178,16 @@ export default function Home() {
             {whatWeDoCards.map((card) => (
               <FeatureCard
                 key={card.id}
-                imageUrl={card.imageUrl}
                 title={card.title}
                 body={card.body}
+                stepNumber={card.stepNumber}
+                iconType={card.title}
 
               />
             ))}
           </div>
         </section>
 
-        {/* How It Works Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-20 flex flex-col justify-center items-center">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div className="flex flex-col items-center justify-center text-center gap-4 mb-8">
@@ -228,19 +225,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sponsor Section */}
-        <SponsorSection
-          sponsors={[
-            { name: "Sponsor 4", logo: "/logos/partner4.png" },
-            { name: "Sponsor 2", logo: "/logos/partner2.png" },
-            { name: "Sponsor 3", logo: "/logos/partner3.png" },
-            { name: "Sponsor 1", logo: "/logos/partner1.png" },
-            { name: "Sponsor 5", logo: "/logos/partner5.png" },
-            { name: "Sponsor 6", logo: "/logos/partner6.png" },
-          ]}
-        />
+        <SponsorSection/>
 
-        {/* Blog Insights Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-20">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div className="space-y-2">
@@ -285,7 +271,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Testimonials Section - Passing the array data instead of component */}
         <section className=" px-4 sm:px-6 lg:px-20 flex flex-col justify-center items-center">
           <TestimonialSection slides={testimonialData} />
 
@@ -297,7 +282,6 @@ export default function Home() {
           </div>
         </section>
         <section className="">
-          
             <CtaSection/>
         </section>
       </main>

@@ -1,76 +1,124 @@
-"use client";
-
-import { useState } from "react";
-import { toast } from "sonner";
+import React, { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import { Button } from "@/src/components/ui/button";
-import { FloatingInput } from "@/src/components/common/FloatingInput";
-import { FloatingTextarea } from "@/src/components/common/FloatingTextarea";
 
-export function ContactForm() {
-  const [form, setForm] = useState({
-    fullName: "",
-    email: "",
-    message: "",
+export interface ContactFormData {
+  fullName: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+interface ContactFormProps {
+  onSubmit: (data: ContactFormData) => void;
+  isLoading?: boolean;
+}
+
+export const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, isLoading = false }) => {
+  const [formData, setFormData] = useState<ContactFormData>({
+    fullName: '',
+    email: '',
+    subject: '',
+    message: '',
   });
 
-  function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  }
+  const subjects = [
+    "General Inquiry",
+    "Partnership Opportunities",
+    "Scaling & Mentorship",
+    "Technical Support",
+  ];
 
-  function handleSubmit(e: React.FormEvent) {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    onSubmit(formData);
 
-    if (!form.fullName || !form.email || !form.message) {
-      toast.error("Please fill in all fields");
-      return;
-    }
-
-    toast.success("Message sent successfully!");
-
-    setForm({
-      fullName: "",
-      email: "",
-      message: "",
-    });
-  }
+    setFormData({
+       fullName: '',
+    email: '',
+    subject: '',
+    message: '',
+    })
+  };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="w-full max-w-xl w-300 space-y-6"
-    >
-      {/* Full Name */}
-      <FloatingInput
-        label="Full Name"
-        name="fullName"
-        value={form.fullName}
-        onChange={handleChange}
-      />
+    <form onSubmit={handleSubmit} className="w-full flex flex-col gap-5 text-left font-dm-sans">
+      <div className="flex flex-col gap-1.5">
+        <label htmlFor="fullName" className="text-xs font-bold text-gray-700">
+          Full Name
+        </label>
+        <input
+          type="text"
+          id="fullName"
+          placeholder="Your full name"
+          required
+          value={formData.fullName}
+          onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+          className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-green-500 transition-colors"
+        />
+      </div>
 
-      {/* Email */}
-      <FloatingInput
-        label="Email Address"
-        name="email"
-        type="email"
-        value={form.email}
-        onChange={handleChange}
-      />
+      <div className="flex flex-col gap-1.5">
+        <label htmlFor="email" className="text-xs font-bold text-gray-700">
+          Email Address
+        </label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Your email address"
+          required
+          value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-green-500 transition-colors"
+        />
+      </div>
 
-      {/* Message */}
-      <FloatingTextarea
-        label="Message"
-        name="message"
-        value={form.message}
-        onChange={handleChange}
-      />
+      {/* Subject Dropdown Select */}
+      <div className="flex flex-col gap-1.5 relative">
+        <label htmlFor="subject" className="text-xs font-bold text-gray-700">
+          Subject
+        </label>
+        <div className="relative">
+          <select
+            id="subject"
+            required
+            value={formData.subject}
+            onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+            className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 appearance-none focus:outline-none focus:border-green-500 transition-colors cursor-pointer"
+          >
+            <option value="" disabled>Select an option</option>
+            {subjects.map((sub, idx) => (
+              <option key={idx} value={sub}>{sub}</option>
+            ))}
+          </select>
+          <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+        </div>
+      </div>
 
-      <Button
-        type="submit"
+      {/* Message Textarea */}
+      <div className="flex flex-col gap-1.5">
+        <label htmlFor="message" className="text-xs font-bold text-gray-700">
+          Message
+        </label>
+        <textarea
+          id="message"
+          rows={4}
+          placeholder="Enter your message"
+          required
+          value={formData.message}
+          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-green-500 transition-colors resize-none"
+        />
+      </div>
+
+      {/* Submit Trigger Button */}
+      <Button 
+        type="submit" 
+        disabled={isLoading}
+        className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl py-6 mt-2 text-sm shadow-sm transition-colors"
       >
-        Send Message
+        {isLoading ? "Sending..." : "Send Message"}
       </Button>
     </form>
   );
-}
+};

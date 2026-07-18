@@ -158,12 +158,10 @@ interface TestimonialCardProps {
   location: string       // Author location (e.g., "From Mexico")
 }
 
-// 2. Section interface to pass an array of testimonials
 interface TestimonialSectionProps {
   slides: TestimonialCardProps[]
 }
 
-// Individual Card Component
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   rating,
   testimonial,
@@ -174,7 +172,6 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   return (
     <div className="flex flex-col justify-between p-6 bg-white border border-gray-100 rounded-2xl shadow-sm min-h-[320px] w-full max-w-sm">
       <div>
-        {/* Star Rating */}
         <div className="flex gap-1 mb-4 text-yellow-400">
           {Array.from({ length: rating }).map((_, index) => (
             <span key={index} className="text-xl">★</span>
@@ -206,12 +203,10 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   )
 }
 
-// Main Section Component
 export default function TestimonialSection({ slides }: TestimonialSectionProps) {
   return (
     <section className="flex flex-col items-center justify-center gap-6 px-4 py-16 bg-background text-center">
       
-      {/* Top Header Section */}
       <Badge className="bg-green-100 text-green-700 hover:bg-green-100 rounded-full px-4 py-1 border-none font-medium">
         Success Stories
       </Badge>
@@ -224,7 +219,6 @@ export default function TestimonialSection({ slides }: TestimonialSectionProps) 
         Real stories from entrepreneurs who are making a difference.
       </p>
 
-      {/* Grid displaying the cards horizontally */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl px-4 text-left">
         {slides.map((slide, index) => (
           <TestimonialCard key={index} {...slide} />

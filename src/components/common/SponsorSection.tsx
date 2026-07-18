@@ -1,47 +1,65 @@
-import Image from "next/image"
+"use client";
 
-interface Sponsor {
-  name: string
-  logo: string
-}
+import React from 'react';
+import { motion } from 'framer-motion';
 
-interface SponsorSectionProps {
-  sponsors: Sponsor[]
-}
+export default function SponsorSection() {
+  const brandLogos = [
+    "/logos/partner1.png",
+    "/logos/partner2.png",
+    "/logos/partner3.png",
+    "/logos/partner4.png",
+    "/logos/partner5.png",
+    "/logos/partner6.png",
+  ];
 
-export function SponsorSection({ sponsors }: SponsorSectionProps) {
+  const duplicatedLogos = [...brandLogos, ...brandLogos];
+
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-20 bg-background">
-      
-      {/* Heading */}
-      <div className="text-center mb-12">
-        <p className="text-[17px] text-[#000000]">TRUSTED BY LEADING ORGANIZATIONS</p>
-        <h2 className="text-[22px] sm:text-[28px] lg:text-[32px] font-dm-sans font-bold text-[#004119]">
+    <section className="w-full bg-white py-16 text-center overflow-hidden">
+      <div className="max-w-5xl mx-auto px-4 mb-10">
+        <p className="text-xs font-semibold tracking-wider text-gray-400 uppercase mb-2">
+          TRUSTED BY LEADING ORGANIZATIONS
+        </p>
+        <h2 className="text-4xl font-extrabold text-[#004d26] tracking-tight">
           Our Partners & Supporters
         </h2>
       </div>
 
-      {/* Logos */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-8 items-center justify-items-center">
-        {sponsors.map((sponsor, index) => (
-          <div
-            key={index}
-            className="flex items-center justify-center md:grayscale md:opacity-80 md:hover:grayscale-0 md:hover:opacity-100 transition duration-300"
-          >
-            <Image
-              src={sponsor.logo}
-              alt={sponsor.name}
-              width={160}
-              height={80}
-              className="object-contain"
-            />
-          </div>
-        ))}
-      </div>
-       <div className="flex items-center justify-center mt-2">
-        <p className="font-dm-sans text-[17px]">Join a network of innovative organizations making an impact</p>
+      <div className="w-full overflow-hidden relative py-4">
+        <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
-      </div> 
-     </section>
-  )
+        <motion.div
+          className="flex w-max items-center gap-20 pr-20"
+          animate={{
+            x: ["0%", "-50%"],
+          }}
+          transition={{
+            ease: "linear",
+            duration: 20, // Lower this number to make them scroll faster, raise it to slow them down
+            repeat: Infinity,
+          }}
+        >
+          {duplicatedLogos.map((logo, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center w-[160px] h-28 flex-shrink-0"
+            >
+              <img
+                src={logo}
+                alt={`Partner logo ${index}`}
+                className="max-h-full max-w-full object-contain select-none mix-blend-multiply"
+                draggable="false"
+              />
+            </div>
+          ))}
+        </motion.div>
+      </div>
+
+      <p className="text-sm font-light text-gray-600 mt-10">
+        Join a network of innovative organizations making an impact
+      </p>
+    </section>
+  );
 }

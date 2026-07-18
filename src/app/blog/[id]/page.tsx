@@ -60,12 +60,10 @@ export default async function BlogDetailPage({ params }: PageProps) {
   const { id } = await params;
   const blog = BlogData.find((item) => item.id === parseInt(id));
 
-  // Handle wrong or non-existent IDs cleanly
   if (!blog) {
     notFound();
   }
 
-  // Filter 3 related articles matching the current category (excluding current post)
   const relatedArticles = BlogData.filter(
     (item) => item.category === blog.category && item.id !== blog.id
   ).slice(0, 3);
@@ -73,19 +71,16 @@ export default async function BlogDetailPage({ params }: PageProps) {
   return (
     <GeneralLayout>
       <main className="max-w-7xl mx-auto px-4 py-12 font-dm-sans flex flex-col items-center justify-center">
-        {/* Category Tag */}
         <div className="mt-5">
           <span className="bg-green-50 text-green-600 text-xs font-semibold px-3 py-1 rounded-full">
             {blog.category}
           </span>
         </div>
 
-        {/* Dynamic Title */}
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight leading-tight mb-4">
           {blog.title}
         </h1>
 
-        {/* Minimal Author Row */}
         <div className="flex items-center gap-4 text-sm text-gray-500 mb-8">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-full bg-gray-200 overflow-hidden" />
@@ -97,7 +92,6 @@ export default async function BlogDetailPage({ params }: PageProps) {
           <span>{blog.readTime}</span>
         </div>
 
-        {/* Hero Image Block */}
         <div className="w-full h-[340px] bg-gray-100 rounded-2xl overflow-hidden mb-12">
           <img 
             src={blog.imageUrl} 
@@ -106,11 +100,17 @@ export default async function BlogDetailPage({ params }: PageProps) {
           />
         </div>
 
-        {/* Article Body Render with styling compatibility for rich HTML nodes */}
-        <div 
-          className="prose prose-emerald max-w-none text-gray-800 space-y-6 leading-relaxed border-b border-gray-100 pb-12"
-          dangerouslySetInnerHTML={{ __html: blog.body || `<p>${blog.subtitle}</p>` }}
-        />
+        
+ <div 
+  className="max-w-none text-gray-800 border-b border-gray-100 pb-12
+    [&_h2]:text-[22px] [&_h2]:font-bold [&_h2]:text-[#0f172a] [&_h2]:tracking-tight [&_h2]:mt-10 [&_h2]:mb-4
+    [&_p]:text-[15px] [&_p]:text-gray-700 [&_p]:leading-relaxed [&_p]:mb-6
+    [&_ul]:list-none [&_ul]:pl-5 [&_ul]:mb-6
+    [&_li]:text-[15px] [&_li]:text-gray-700 [&_li]:mb-5 [&_li]:relative [&_li]:pl-6
+    [&_li]:before:content-['•'] [&_li]:before:absolute [&_li]:before:left-0 [&_li]:before:text-gray-400 [&_li]:before:font-bold"
+  dangerouslySetInnerHTML={{ __html: blog.body || `<p>${blog.subtitle}</p>` }}
+/>
+
 
             <section className="py-16 px-4 sm:px-6 lg:px-20 flex flex-col justify-center items-center">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -148,7 +148,6 @@ export default async function BlogDetailPage({ params }: PageProps) {
     
         <section className="py-16 px-4 sm:px-6 lg:px-20 flex flex-col justify-center items-center">
 
-        {/* Author Details Card */}
         <div className="py-12 shadow flex items-start gap-4">
           <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden flex-shrink-0" />
           <div>
@@ -160,7 +159,6 @@ export default async function BlogDetailPage({ params }: PageProps) {
         </div>
                 </section>
 
-        {/* Related Articles Section */}
         {relatedArticles.length > 0 && (
           <section className="pt-16 pb-8">
             <div className="text-center mb-10">

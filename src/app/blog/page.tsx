@@ -2,17 +2,45 @@
 
 import React from 'react'
 import { GeneralLayout } from "@/src/components/common/GeneralLayout";
-import { Button } from "@/src/components/ui/button"
 import BlogData from "@/src/BlogData"
 import { BlogCard } from "@/src/components/common/BlogCard";
 import CtaSection from '@/src/components/blocks/CtaSection';
 import Link from 'next/link'
 import {useState, useEffect} from "react"
 
-const page = () => {
+interface FormData {
+  email: string
+  fullname: string
+  password: string
+}
+
+interface FormDataProps {
+  Loading: boolean
+  onSubmit: (data: FormData) => void
+}
+
+const page: React.FC<FormDataProps> = ({onSubmit, Loading = false}) => {
   const [category, setCategory] = useState("All Posts")
   const [filteredData, setFilteredData] = useState(BlogData)
   const [isLoading, setIsLoading] = useState(true)
+  const [formData, setFormData] = useState<FormData>({
+    email: "",
+    fullname: "",
+    password: ""
+  })
+
+
+    const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault()
+      onSubmit(formData)
+
+
+      setFormData({
+        email: "",
+        fullname: "",
+        password: ""
+      })
+    }
 
   useEffect(() => {
     setIsLoading(true)
@@ -135,7 +163,6 @@ const page = () => {
 
   return (
     <GeneralLayout>
-        
         <main>
       <section className="max-w-3xl  mx-auto text-center py-20 ">
         <span className="inline-block bg-green-50 text-green-600 text-xs font-semibold px-3 py-1 rounded-full mb-4">
@@ -148,18 +175,18 @@ const page = () => {
       </section>
       <section className="flex flex-col items-center justify-center max-w-7xl">
         <div className="flex items-center justify-center gap-6 mb-4">
-          <Button className='rounded-full' onClick={() => setCategory("All Posts")}>
+          <button className={`${category === "All Posts" ? "bg-[#008000] text-white" : "bg-[#80808033] text-black"} py-1.5 px-4 rounded-full cursor-pointer`} onClick={() => setCategory("All Posts")}>
             All Posts(34)
-          </Button>
-          <Button className='rounded-full' onClick={() => setCategory("Community")}>
+          </button>
+          <button className={`${category === "Community" ? "bg-[#008000] text-white" : "bg-[#80808033] text-black"} py-1.5 px-4 rounded-full cursor-pointer`} onClick={() => setCategory("Community")}>
             Community(10)
-          </Button>
-          <Button className='rounded-full' onClick={() => setCategory("Impact Stories")}>
+          </button>
+          <button className={`${category === "Impact Stories" ? "bg-[#008000] text-white" : "bg-[#80808033] text-black"} py-1.5 px-4 rounded-full cursor-pointer`} onClick={() => setCategory("Impact Stories")}>
             Impact Stories(34)
-          </Button>
-          <Button className='rounded-full' onClick={() => setCategory("Scaling")}>
+          </button>
+          <button className={`${category === "Scaling" ? "bg-[#008000] text-white" : "bg-[#80808033] text-black"} py-1.5 px-4 rounded-full cursor-pointer`} onClick={() => setCategory("Scaling")}>
             Scaling(34)
-          </Button>
+          </button>
         </div>
         <div className="flex items-center justify-center">
 

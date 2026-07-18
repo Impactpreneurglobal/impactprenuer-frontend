@@ -84,6 +84,7 @@ and globally inspired starting with African changemakers.`,
     }
   ];
 
+
  const TeamData = {
   founders: [
     {
@@ -152,10 +153,9 @@ and globally inspired starting with African changemakers.`,
   ],
 };
 
-
-    return(
-      <GeneralLayout>
-    <main>
+   return(
+     <GeneralLayout>
+       <main>
        <section className="max-w-3xl  mx-auto text-center py-20 ">
         <span className="inline-block bg-green-50 text-green-600 text-xs font-semibold px-3 py-1 rounded-full mb-4">
           About Us
@@ -170,12 +170,10 @@ and globally inspired starting with African changemakers.`,
       <section className="w-full bg-white py-16 px-4 font-dm-sans">
       <div className="max-w-3xl mx-auto flex flex-col">
         
-        {/* Section Heading */}
         <h2 className="text-2xl font-bold text-gray-950 mb-6 tracking-tight">
           Our Story
         </h2>
 
-        {/* Narrative Copy Body */}
         <div className="space-y-6 text-sm sm:text-[15px] text-gray-600 leading-relaxed font-light">
           <p>
             Impactpreneur Global started as something simple: a community where people shared books, ideas, and resources freely. Just people who believed knowledge should be accessible to everyone.
@@ -195,17 +193,15 @@ and globally inspired starting with African changemakers.`,
         </div>
 
         <div className="bg-[#008000] relative mt-12 rounded-[25px] sm:p-8 max-w-2xl mx-auto w-full h-[165px]">
-          <div className="absolute inset-0 translate-x-2 w-full bg-red-400 h-full rounded-[25px] sm:p-8">
+          <div className="absolute inset-0 translate-x-2 w-full bg-green-100 h-full rounded-[25px] sm:p-8">
             <div className="absolute top-4 right-6 text-emerald-600/20">
             <Quote className="w-8 h-8 rotate-180 fill-current" />
             </div>
 
-          {/* Quote Text */}
           <blockquote className="text-gray-800 text-sm sm:text-[15px] font-medium leading-relaxed mb-6 pr-4">
             "Impactpreneur Global taught me how to change my passion into profit, by creating a business that ignites my soul and inspires others."
           </blockquote>
 
-          {/* Quote Author Row */}
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
               <User className="w-4 h-4 text-purple-500" />
@@ -221,8 +217,6 @@ and globally inspired starting with African changemakers.`,
           </div>
         </div>
         </div>
-        
-
       </div>
     </section>
       <section className="flex flex-col justify-center items-center mx-auto max-w-6xl ">

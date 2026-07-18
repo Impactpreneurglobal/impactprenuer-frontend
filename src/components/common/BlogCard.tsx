@@ -2,6 +2,7 @@
 import { Card, CardContent, CardHeader } from "@/src/components/ui/card"
 import Link from "next/link"
 import { Badge } from "@/src/components/ui/badge";
+import { User, Clock, Calendar } from "lucide-react"; // Added standard Lucide icons
 
 
 export interface BlogCardProps {
@@ -63,12 +64,14 @@ export function BlogCard({
           <div className="border-t border-black/10 my-2"/>
           {name &&
           <div className="flex justify-between items-center">
-            <div className="flex justify-center items-center">
-              <p className="text-[#515151] text-xs font-medium sm:text-sm">{icon}</p>
+            {/* Added the User/Author icon here */}
+            <div className="flex justify-center items-center gap-1">
+              <User className="w-3.5 h-3.5 text-gray-400" />
               <p className="text-[#515151] text-xs font-medium sm:text-sm">{name}</p>
             </div>
-            <div className="flex justify-center items-center">
-              <p className="text-[#515151] text-xs font-medium sm:text-sm">{icon}</p>
+            {/* Added the Clock/Time icon here */}
+            <div className="flex justify-center items-center gap-1">
+              <Clock className="w-3.5 h-3.5 text-gray-400" />
               <p className="text-[#515151] text-xs font-medium sm:text-sm">{time}</p>
             </div>
           </div>
@@ -76,9 +79,13 @@ export function BlogCard({
           
 
            {date && (
-            <p className="text-[#515151] text-xs font-medium sm:text-sm">
-              {date}
-            </p>
+            /* Added the Calendar icon here */
+            <div className="flex items-center gap-1 mt-1">
+              <Calendar className="w-3.5 h-3.5 text-gray-400" />
+              <p className="text-[#515151] text-xs font-medium sm:text-sm">
+                {date}
+              </p>
+            </div>
           )} 
 
           {/* {body && (
