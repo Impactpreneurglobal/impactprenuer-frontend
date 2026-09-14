@@ -1,12 +1,22 @@
 "use client"
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { GeneralLayout } from "@/src/components/common/GeneralLayout";
-import BlogData from "@/src/BlogData"
 import { BlogCard } from "@/src/components/common/BlogCard";
 import CtaSection from '@/src/components/blocks/CtaSection';
 import Link from 'next/link'
-import {useState, useEffect} from "react"
+import { fetchBlogs } from "@/services/api"
+
+// 1. Defined Blog interface matching Django API schema
+export interface Blog {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  date?: string;
+  created_at?: string;
+  category?: string;
+}
 
 interface FormData {
   email: string
@@ -15,13 +25,14 @@ interface FormData {
 }
 
 interface FormDataProps {
-  Loading: boolean
-  onSubmit: (data: FormData) => void
+  Loading?: boolean
+  onSubmit?: (data: FormData) => void
 }
 
-const page: React.FC<FormDataProps> = ({onSubmit, Loading = false}) => {
+const Page: React.FC<FormDataProps> = ({ onSubmit, Loading = false }) => {
   const [category, setCategory] = useState("All Posts")
-  const [filteredData, setFilteredData] = useState(BlogData)
+  
+  const [filteredData, setFilteredData] = useState<Blog[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [formData, setFormData] = useState<FormData>({
     email: "",
@@ -29,196 +40,128 @@ const page: React.FC<FormDataProps> = ({onSubmit, Loading = false}) => {
     password: ""
   })
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (onSubmit) onSubmit(formData)
 
-    const handleSubmit = (e: React.FormEvent) => {
-      e.preventDefault()
-      onSubmit(formData)
-
-
-      setFormData({
-        email: "",
-        fullname: "",
-        password: ""
-      })
-    }
+    setFormData({
+      email: "",
+      fullname: "",
+      password: ""
+    })
+  }
 
   useEffect(() => {
-    setIsLoading(true)
-    if(category === "All Posts"){
-      setFilteredData(BlogData)
+    let isMounted = true
+
+    async function loadData() {
+      setIsLoading(true)
+      try {
+        const data: Blog[] = await fetchBlogs(1)
+
+        if (!isMounted) return
+
+        if (category === "All Posts") {
+          setFilteredData(data)
+        } else {
+          const activeCategory = data.filter((item: Blog) => item.category === category)
+          setFilteredData(activeCategory)
+        }
+      } catch (error) {
+        console.error("Error Fetching Blogs:", error)
+      } finally {
+        if (isMounted) {
+          setIsLoading(false)
+        }
+      }
     }
-    else {
-      
-      const activeCategory = BlogData.filter((item) => item.category === category)
-      setFilteredData(activeCategory)
+
+    loadData()
+
+    return () => {
+      isMounted = false
     }
-    setIsLoading(false)
-  },[category])
-
-  // const blogPosts = [
-  //   {
-  //     id: 1,
-  //     title: "How to Find the Right Mentor for Your Impact Journey",
-  //     name: "John Micheal",
-  //     time: "2pm",
-  //     date: "28 October, 2025",
-  //     subtitle: "Discover key strategies to identify and connect with mentors who align with your...",
-  //     imageUrl: "/images/Blog.png",
-  //     category: "Finance",
-  //     readTime: "5 min read",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "How to Find the Right Mentor for Your Impact Journey",
-  //     name: "John Micheal",
-  //     time: "2pm",
-  //     date: "28 October, 2025",
-  //     subtitle: "Discover key strategies to identify and connect with mentors who align with your...",
-  //     imageUrl: "/images/Blog.png",
-  //     category: "Finance",
-  //     readTime: "5 min read",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "How to Find the Right Mentor for Your Impact Journey",
-  //     name: "John Micheal",
-  //     time: "2pm",
-  //     date: "28 October, 2025",
-  //     subtitle: "Discover key strategies to identify and connect with mentors who align with your...",
-  //     imageUrl: "/images/Blog.png",
-  //     category: "Finance",
-  //     readTime: "5 min read",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "How to Find the Right Mentor for Your Impact Journey",
-  //     name: "John Micheal",
-  //     time: "2pm",
-  //     date: "28 October, 2025",
-  //     subtitle: "Discover key strategies to identify and connect with mentors who align with your...",
-  //     imageUrl: "/images/Blog.png",
-  //     category: "Finance",
-  //     readTime: "5 min read",
-  //   },
-  //   {
-  //     id: 5,
-  //     title: "How to Find the Right Mentor for Your Impact Journey",
-  //     name: "John Micheal",
-  //     time: "2pm",
-  //     date: "28 October, 2025",
-  //     subtitle: "Discover key strategies to identify and connect with mentors who align with your...",
-  //     imageUrl: "/images/Blog.png",
-  //     category: "Finance",
-  //     readTime: "5 min read",
-  //   },
-  //       {
-  //     id: 6,
-  //     title: "How to Find the Right Mentor for Your Impact Journey",
-  //     name: "John Micheal",
-  //     time: "2pm",
-  //     date: "28 October, 2025",
-  //     subtitle: "Discover key strategies to identify and connect with mentors who align with your...",
-  //     imageUrl: "/images/Blog.png",
-  //     category: "Finance",
-  //     readTime: "5 min read",
-  //   },
-  //       {
-  //     id: 7,
-  //     title: "How to Find the Right Mentor for Your Impact Journey",
-  //     name: "John Micheal",
-  //     time: "2pm",
-  //     date: "28 October, 2025",
-  //     subtitle: "Discover key strategies to identify and connect with mentors who align with your...",
-  //     imageUrl: "/images/Blog.png",
-  //     category: "Finance",
-  //     readTime: "5 min read",
-  //   },
-
-  //       {
-  //     id: 8,
-  //     title: "How to Find the Right Mentor for Your Impact Journey",
-  //     name: "John Micheal",
-  //     time: "2pm",
-  //     date: "28 October, 2025",
-  //     subtitle: "Discover key strategies to identify and connect with mentors who align with your...",
-  //     imageUrl: "/images/Blog.png",
-  //     category: "Finance",
-  //     readTime: "5 min read",
-  //   },
-  //   {
-  //     id: 9,
-  //     title: "How to Find the Right Mentor for Your Impact Journey",
-  //     name: "John Micheal",
-  //     time: "2pm",
-  //     date: "28 October, 2025",
-  //     subtitle: "Discover key strategies to identify and connect with mentors who align with your...",
-  //     imageUrl: "/images/Blog.png",
-  //     category: "Finance",
-  //     readTime: "5 min read",
-  //   },
-
-
-   
-  // ];
+  }, [category])
 
   return (
     <GeneralLayout>
-        <main>
-      <section className="max-w-3xl  mx-auto text-center py-20 ">
-        <span className="inline-block bg-green-50 text-green-600 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-          Insights & Stories
-        </span>
-        <h1 className="text-4xl font-extrabold text-gray-950 mb-4 tracking-tight">
-          Impact Enterpreneur <span className="text-green-500 block sm:inline">Blog</span>
-        </h1>
-        <p className="text-[17px] font-dm-sans">Stories, insights, and resources from our global community of impact entrepreneurs. Learn from success stories, industry experts, and thought leaders.</p>
-      </section>
-      <section className="flex flex-col items-center justify-center max-w-7xl">
-        <div className="flex items-center justify-center gap-6 mb-4">
-          <button className={`${category === "All Posts" ? "bg-[#008000] text-white" : "bg-[#80808033] text-black"} py-1.5 px-4 rounded-full cursor-pointer`} onClick={() => setCategory("All Posts")}>
-            All Posts(34)
-          </button>
-          <button className={`${category === "Community" ? "bg-[#008000] text-white" : "bg-[#80808033] text-black"} py-1.5 px-4 rounded-full cursor-pointer`} onClick={() => setCategory("Community")}>
-            Community(10)
-          </button>
-          <button className={`${category === "Impact Stories" ? "bg-[#008000] text-white" : "bg-[#80808033] text-black"} py-1.5 px-4 rounded-full cursor-pointer`} onClick={() => setCategory("Impact Stories")}>
-            Impact Stories(34)
-          </button>
-          <button className={`${category === "Scaling" ? "bg-[#008000] text-white" : "bg-[#80808033] text-black"} py-1.5 px-4 rounded-full cursor-pointer`} onClick={() => setCategory("Scaling")}>
-            Scaling(34)
-          </button>
-        </div>
-        <div className="flex items-center justify-center">
+      <main>
+        <section className="max-w-3xl mx-auto text-center py-20">
+          <span className="inline-block bg-green-50 text-green-600 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+            Insights & Stories
+          </span>
+          <h1 className="text-4xl font-extrabold text-gray-950 mb-4 tracking-tight">
+            Impact Entrepreneur <span className="text-green-500 block sm:inline">Blog</span>
+          </h1>
+          <p className="text-[17px] font-dm-sans">
+            Stories, insights, and resources from our global community of impact entrepreneurs. Learn from success stories, industry experts, and thought leaders.
+          </p>
+        </section>
 
-          <div className=" mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center items-stretch mt-8">
-            {isLoading && (
-              <div className="col-span-full text-center">
-                <p>Loading...</p>
-              </div>
-            )}
-            {filteredData.map((blogs) => (
-                
-             <Link href={`/blog/${blogs.id}`} key={blogs.id} >
-              <BlogCard
-                // id={blogs.id}
-                title={blogs.title}
-                date={blogs.date}
-                subtitle={blogs.subtitle}
-                imageUrl={blogs.imageUrl}
-                name="maxwell small"
-                time={blogs.readTime}
-              />
-              </Link>
-            ))}
+        <section className="flex flex-col items-center justify-center max-w-7xl mx-auto px-4">
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-4">
+            <button 
+              className={`${category === "All Posts" ? "bg-[#008000] text-white" : "bg-[#80808033] text-black"} py-1.5 px-4 rounded-full cursor-pointer`} 
+              onClick={() => setCategory("All Posts")}
+            >
+              All Posts
+            </button>
+            <button 
+              className={`${category === "Community" ? "bg-[#008000] text-white" : "bg-[#80808033] text-black"} py-1.5 px-4 rounded-full cursor-pointer`} 
+              onClick={() => setCategory("Community")}
+            >
+              Community
+            </button>
+            <button 
+              className={`${category === "Impact Stories" ? "bg-[#008000] text-white" : "bg-[#80808033] text-black"} py-1.5 px-4 rounded-full cursor-pointer`} 
+              onClick={() => setCategory("Impact Stories")}
+            >
+              Impact Stories
+            </button>
+            <button 
+              className={`${category === "Scaling" ? "bg-[#008000] text-white" : "bg-[#80808033] text-black"} py-1.5 px-4 rounded-full cursor-pointer`} 
+              onClick={() => setCategory("Scaling")}
+            >
+              Scaling
+            </button>
           </div>
-        </div>
-      </section>
-       <section>
-                <CtaSection/>
-              </section>
-        </main>
+
+          <div className="w-full">
+            <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center items-stretch mt-8">
+              {isLoading && (
+                <div className="col-span-full text-center py-10">
+                  <p className="text-gray-500 font-medium">Loading blogs...</p>
+                </div>
+              )}
+
+              {!isLoading && filteredData.length === 0 && (
+                <div className="col-span-full text-center py-10">
+                  <p className="text-gray-500 font-medium">No posts found for this category.</p>
+                </div>
+              )}
+
+              {!isLoading && filteredData.map((blog) => (
+                <Link href={`/blog/${blog.id}`} key={blog.id} className="w-full">
+                  <BlogCard
+                    title={blog.title}
+                    date={blog.date || blog.created_at}
+                    subtitle={blog.description}
+                    imageUrl={blog.image}
+                    name="Maxwell Small"
+                    time="5 min read"
+                  />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <CtaSection />
+        </section>
+      </main>
     </GeneralLayout>
   )
 }
 
-export default page
+export default Page

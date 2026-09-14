@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { GeneralLayout } from "@/src/components/common/GeneralLayout";
 import { Briefcase, GraduationCap, Users, Cpu, Handshake } from 'lucide-react';
@@ -5,6 +7,7 @@ import { AccordionItemProps } from '@/src/components/common/ServiceAccordion';
 import CtaSection from '@/src/components/blocks/CtaSection';
 import {ServiceAccordion} from "@/src/components/common/ServiceAccordion"
 // import {Badge} from "@/src/components/ui/badge"
+import {RequestForm} from "@/src/components/blocks/RequestForm"
 
 const RequestPage = () => {
   const ServiceData: AccordionItemProps[] = [
@@ -311,32 +314,21 @@ const RequestPage = () => {
       <main>
         <section className="max-w-6xl mx-auto text-center py-20 px-4">
           <span className="inline-block bg-green-50 text-[#008000] mt-2 text-[15px] font-semibold px-3 py-1 rounded-full mb-4">
-         hey
+         Request/Services
         </span>
-          <h1 className="text-[27px] font-extrabold text-[#0000008C] mb-4 tracking-tight">
-            Tools, programs, and services designed to help <br /> <span className='text-[#46F446]'>Impact-Driven entrepreneurs.</span>  
-
+          <h1 className="text-[27px] font-extrabold text-[#0000008C] mb-2 tracking-tight">
+            Request Services
           </h1>
           <p className="text-[17px] font-dm-sans mx-auto">
-            Explore the tools, programs, services, technology, and community support designed to help entrepreneurs build, grow, and <br /> scale impactful ventures across Africa and beyond.
+            You picked<span>  “World-Class Branding” </span> <br /> Tell us a little about your needs and our team will reach out with the next steps.
+
           </p>
           
-          {/* Layout adjustment: Grid layout changed to flex or full-width container since accordions look best stacked vertically instead of side-by-side grid cards */}
-          <div className="flex flex-col gap-4 text-left max-w-4xl mx-auto mt-10">
-            {ServiceData.map((item) => (
-              <ServiceAccordion
-                key={item.id}
-                id={item.id}
-                title={item.title}
-                badgeText={item.badgeText}
-                badgeColorClass={item.badgeColorClass}
-                iconBgClass={item.iconBgClass}
-                icon={item.icon}
-                description={item.description}
-                subItems={item.subItems}
-              />
-            ))}
-          </div>
+        </section>
+        <section className="flex flex-col justify-center items-center w-full mb-15">
+          <h2 className='font-bold text-3xl my-5'>Form Content</h2>
+
+        <RequestForm onSubmit={(data) => console.log(data)}/>
         </section>
         
         <section>

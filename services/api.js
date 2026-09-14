@@ -2,7 +2,9 @@ const BASE_URL = "https://impactprenuer-backend.onrender.com/api"
 
 // Fetch blogs
 export async function fetchBlogs(page = 1) {
-  const res = await fetch(`${BASE_URL}/blogs/?page=${page}`)
+  const res = await fetch(`${BASE_URL}/blogs/?page=${page}, {
+    cache: "no-store"
+    }`)
   if (!res.ok) throw new Error("Failed to fetch blogs")
   const data = await res.json()
   return data.results // return only the results array
@@ -37,3 +39,4 @@ export async function fetchTeamMembers(page = 1) {
   const data = await res.json()
   return data.results
 }
+

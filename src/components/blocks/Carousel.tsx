@@ -146,7 +146,6 @@ export function CarouselCard() {
   ]
 
   return (
-    // Height explicitly set to 622px matching your Figma layout dimensions exactly
     <div className="relative w-full h-[622px] overflow-hidden bg-black">
       {/* Carousel Wrapper */}
       <div className="w-full h-full relative">
@@ -157,7 +156,6 @@ export function CarouselCard() {
               index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
-            {/* Base Underlay Image */}
             <Image 
               src={slide.src} 
               alt={slide.title} 
@@ -166,35 +164,28 @@ export function CarouselCard() {
               priority
             />
 
-            {/* Figma Gradient Overlay (Rectangle 1 Layout):
-              Matches your properties panel: Linear Gradient from Pure Black (#000000) 
-              to Blue (#0000FF at 65% opacity). 
-            */}
+       
             <div className="absolute inset-0 bg-gradient-to-l  from-black/80 via-[#0000FF]/35 to-[#0000FF]/65 z-20 mix-blend-multiply" />
 
             {/* Foreground Content Panel */}
-            <div className="absolute inset-0 max-w-7xl mx-auto flex items-center justify-start px-6 md:px-20 z-30">
+            <div className="absolute inset-0 max-w-7xl flex items-center justify-start px-6 md:px-20 z-30">
               <div className="w-full b md:w-3/4 flex flex-col items-start text-left">
                 
-                {/* Pill Badge */}
                 {slide.badge && (
                   <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-xs font-medium text-[#4ade80] border border-white/20 mb-6">
                     {slide.badge}
                   </div>
                 )}
 
-                {/* Main Heading — styled to match the split color format */}
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-dm-sans text-white tracking-tight leading-[1.15] mb-4 max-w-3xl">
                   Empowering Impact-<br />Driven <br />
                   <span className="text-[#4ade80]">Entrepreneurs Worldwide</span>
                 </h1>
 
-                {/* Subtext description */}
                 <p className="text-sm md:text-base text-white/80 font-normal leading-relaxed mb-8 max-w-2xl">
                   {slide.description}
                 </p>
 
-                {/* Action CTA Button */}
                 <Link href="/resources/blogs" passHref>
                   <Button className="bg-[#22c55e] hover:bg-[#16a34a] text-white font-medium px-6 py-5 rounded-full flex items-center gap-2 transition-all shadow-lg">
                     Get Started 
@@ -203,8 +194,9 @@ export function CarouselCard() {
                 </Link>
 
               </div>
-              <div className="w-full absolute bottom-24 border-t border-white/30"/>
-            {/* Bottom Counter Metrics (10K+, 20+, 20+) from Figma Design */}
+
+              <div className="w-[90%] absolute bottom-24 border-t border-white/30"/>
+
             <div className="absolute w-[90%] bottom-6 flex justify-between items-center text-white font-bold ">
               <div>
                 <p className="text-xl font-bold font-dm-sans">10K+</p>
@@ -221,7 +213,7 @@ export function CarouselCard() {
             </div>
             </div>
 
-                bottom-6 md:left-20 md:right-20 z-30  md:justify-start md:gap-24  pt-4 text-white
+                {/* bottom-6 md:left-20 md:right-20 z-30  md:justify-start md:gap-24  pt-4 text-white */}
           </div>
         ))}
       </div>

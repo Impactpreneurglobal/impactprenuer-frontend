@@ -1,5 +1,6 @@
 "use client"
 
+import { FormEvent, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Mail, Phone } from "lucide-react";
@@ -7,6 +8,14 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export function Footer() {
+const [email, setEmail] = useState("")
+
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault()
+  console.log("Submitted email:", email)
+  setEmail("")
+}
+
   return (
     <footer className="text-white w-full bg-[#0b1d14]">
       <div className="container mx-auto px-6 lg:px-16 py-12 max-w-7xl">
@@ -81,16 +90,18 @@ export function Footer() {
             <p className="text-gray-300 text-[14px] mb-6">
               Get the latest insights and opportunities delivered to your inbox.
             </p>
-            <form onSubmit={(e) => e.preventDefault()} className="flex flex-col sm:flex-row gap-3">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
               <input 
                 type="email" 
                 placeholder="Your email" 
                 className="w-full max-w-sm px-4 py-2.5 rounded-[8px] bg-white text-black text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <button 
                 type="submit" 
-                className="bg-[#00801a] hover:bg-[#006614] text-white font-medium text-sm px-6 py-2.5 rounded-[8px] transition-colors whitespace-nowrap"
+                className="bg-[#00801a] hover:bg-[#006614] text-white cursor-pointer font-medium text-sm px-6 py-2.5 rounded-[8px] transition-colors whitespace-nowrap"
               >
                 Subscribe
               </button>

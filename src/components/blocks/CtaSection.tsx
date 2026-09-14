@@ -9,6 +9,7 @@ export default function CtaSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log("Submitted email:", email)
+    setEmail("")
   }
 
   return (
@@ -36,7 +37,7 @@ export default function CtaSection() {
 
           <button
             type="submit"
-            className="flex items-center gap-2 px-6 py-2.5 rounded-full border border-white/40 text-white text-sm bg-transparent hover:bg-white/10 transition dynamic-btn font-medium"
+            className="flex items-center gap-2 px-6 py-2.5 rounded-full cursor-pointer border border-white/40 text-white text-sm bg-transparent hover:bg-white/10 transition dynamic-btn font-medium"
           >
             Get Started
             <ArrowRight className="h-4 w-4" />

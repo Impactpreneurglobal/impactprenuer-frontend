@@ -73,7 +73,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, isLoading = 
         />
       </div>
 
-      {/* Subject Dropdown Select */}
       <div className="flex flex-col gap-1.5 relative">
         <label htmlFor="subject" className="text-xs font-bold text-gray-700">
           Subject
@@ -95,7 +94,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, isLoading = 
         </div>
       </div>
 
-      {/* Message Textarea */}
       <div className="flex flex-col gap-1.5">
         <label htmlFor="message" className="text-xs font-bold text-gray-700">
           Message
@@ -111,7 +109,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, isLoading = 
         />
       </div>
 
-      {/* Submit Trigger Button */}
       <Button 
         type="submit" 
         disabled={isLoading}

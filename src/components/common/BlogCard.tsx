@@ -36,7 +36,7 @@ export function BlogCard({
         {/* Image */}
         <div className="relative w-full h-[150px]">
           <img
-            src={imageUrl}
+            src={imageUrl || "/images/Blog.png"}
             alt={title ?? "program image"}
             className="absolute inset-0 w-full h-full object-cover "
           />
@@ -62,20 +62,22 @@ export function BlogCard({
           )}
 
           <div className="border-t border-black/10 my-2"/>
-          {name &&
-          <div className="flex justify-between items-center">
-            {/* Added the User/Author icon here */}
-            <div className="flex justify-center items-center gap-1">
-              <User className="w-3.5 h-3.5 text-gray-400" />
-              <p className="text-[#515151] text-xs font-medium sm:text-sm">{name}</p>
-            </div>
-            {/* Added the Clock/Time icon here */}
-            <div className="flex justify-center items-center gap-1">
-              <Clock className="w-3.5 h-3.5 text-gray-400" />
-              <p className="text-[#515151] text-xs font-medium sm:text-sm">{time}</p>
-            </div>
-          </div>
-          }
+         {(name || time) && (
+  <div className="flex justify-between items-center">
+    {name && (
+      <div className="flex justify-center items-center gap-1">
+        <User className="w-3.5 h-3.5 text-gray-400" />
+        <p className="text-[#515151] text-xs font-medium sm:text-sm">{name}</p>
+      </div>
+    )}
+    {time && (
+      <div className="flex justify-center items-center gap-1">
+        <Clock className="w-3.5 h-3.5 text-gray-400" />
+        <p className="text-[#515151] text-xs font-medium sm:text-sm">{time}</p>
+      </div>
+    )}
+  </div>
+)}
           
 
            {date && (
@@ -105,3 +107,4 @@ export function BlogCard({
     </Card>
   )
 }
+

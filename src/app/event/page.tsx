@@ -78,8 +78,8 @@ const page = () => {
              </div>
          </div>
           </div>
-         <div className="flex flex-col mx-auto justify-start items-start gap-4">
-          <div className="w-[320px] h-[317px] flex flex-col justify-start items-start">
+         <div className="flex flex-col mx-auto justify-start items-start gap-2 h-[684px]">
+          <div className="w-[400px] h-[320px] flex flex-col justify-start items-start">
             <h1 className="text-[17px] text-start font-bold mb-2">Impact Entrepreneurs Global Summit 2026</h1>
             <p className="text-[15px] text-start mb-2">Join 500+ impact-driven founders, investors, and ecosystem builders for three days of transformative learning, strategic networking, and partnership opportunities. Featuring 50+ speakers, interactive workshops, and pitch competitions.</p>
             <div className="flex items-center justify-center gap-1.5 mt-3">
@@ -96,9 +96,9 @@ const page = () => {
            </div>
           </div>
 
-          <div className="border border-gray-300 mt-3 w-full"/>
+          <div className="border border-gray-300 mt-[-30px] w-full"/>
 
-          <div className="w-[320px] h-[317px] flex flex-col rounded-lg justify-start items-start mt-3 bg-[#00800012]">
+          <div className="w-[320px] h-[320px] my-2 flex flex-col rounded-lg justify-start items-start bg-[#00800012]">
             <h3 className="font-bold mt-4 mx-5">What’s Included:</h3>
             <div className="mt-2 flex flex-col gap-2">
               <div className="flex items-center justify-center gap-1.5 mt-3">

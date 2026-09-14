@@ -80,7 +80,7 @@ const handleSubmit = (e: React.FormEvent) => {
 }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="w-[45%] flex flex-col gap-5">
              <div className="flex flex-col gap-1.5">
                   <label htmlFor="fullName" className="text-xs font-bold text-gray-700">
                     Full Name
@@ -220,7 +220,7 @@ const handleSubmit = (e: React.FormEvent) => {
                     </select>
                     <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
                   </div>
-                  <div className="flex flex-col gap-1.5 relative">
+                  <div className="flex flex-col gap-2 relative">
                   <label htmlFor="timeline" className="text-xs font-bold text-gray-700">
                     Timeline
                   </label>

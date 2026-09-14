@@ -8,6 +8,7 @@ import { Button } from "@/src/components/ui/button"
 import { Badge } from "@/src/components/ui/badge";
 import { ArrowRight, Users, MessageSquare, Calendar, TrendingUp } from "lucide-react"
 import { ProgramCard } from "@/src/components/common/ProgramCard";
+import { Quote, User } from 'lucide-react';
 
 
 interface PageProps {
@@ -110,6 +111,32 @@ export default async function BlogDetailPage({ params }: PageProps) {
     [&_li]:before:content-['•'] [&_li]:before:absolute [&_li]:before:left-0 [&_li]:before:text-gray-400 [&_li]:before:font-bold"
   dangerouslySetInnerHTML={{ __html: blog.body || `<p>${blog.subtitle}</p>` }}
 />
+
+            <div className="bg-[#008000] relative mt-12 rounded-[25px] sm:p-8 max-w-2xl mx-auto w-full h-[165px]">
+              <div className="absolute inset-0 translate-x-1.5 w-full bg-green-100 h-full rounded-[25px] sm:p-8">
+                <div className="absolute top-4 right-6 text-emerald-600/20">
+                <Quote className="w-8 h-8 rotate-180 fill-current" />
+                </div>
+    
+              <blockquote className="text-gray-800 text-sm sm:text-[15px] font-medium leading-relaxed mb-6 pr-4">
+                "Impactpreneur Global taught me how to change my passion into profit, by creating a business that ignites my soul and inspires others."
+              </blockquote>
+    
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                  <User className="w-4 h-4 text-purple-500" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 text-xs sm:text-sm tracking-tight">
+                    Loli Sachedina
+                  </h4>
+                  <p className="text-[11px] text-gray-400 font-medium">
+                    Impact Entrepreneur
+                  </p>
+                </div>
+              </div>
+            </div>
+            </div>
 
 
             <section className="py-16 px-4 sm:px-6 lg:px-20 flex flex-col justify-center items-center">

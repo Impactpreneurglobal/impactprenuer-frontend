@@ -11,7 +11,7 @@ import {ProgramCard} from "@/src/components/common/ProgramCard";
 import { Badge } from "@/src/components/ui/badge";
 // import { ArrowRight } from "lucide-react";
 import  ProfileCard   from "@/src/components/common/ProfileCard";
-import { SponsorSection } from "@/src/components/common/SponsorSection";
+// import { SponsorSection } from "@/src/components/common/SponsorSection";
 import { GeneralLayout } from "@/src/components/common/GeneralLayout";
 import profileData from "@/src/ProfileData";
 import { User, Users, Rocket, Award } from 'lucide-react';
@@ -193,7 +193,7 @@ and globally inspired starting with African changemakers.`,
         </div>
 
         <div className="bg-[#008000] relative mt-12 rounded-[25px] sm:p-8 max-w-2xl mx-auto w-full h-[165px]">
-          <div className="absolute inset-0 translate-x-2 w-full bg-green-100 h-full rounded-[25px] sm:p-8">
+          <div className="absolute inset-0 translate-x-1.5 w-full bg-green-100 h-full rounded-[25px] sm:p-8">
             <div className="absolute top-4 right-6 text-emerald-600/20">
             <Quote className="w-8 h-8 rotate-180 fill-current" />
             </div>
