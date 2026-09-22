@@ -7,14 +7,14 @@ interface FeatureCardProps {
   title?: string;
   body: string;
   stepNumber: string;
-  iconType: "user" | "target" | "rocket" | "scale" | string; 
+  // iconType: "user" | "target" | "rocket" | "scale" | string; 
 }
 
 export function FeatureCard({
   title,
   body,
   stepNumber,
-  iconType,
+  // iconType,
 }: FeatureCardProps) {
   
   const icons: Record<string, LucideIcon> = {
@@ -24,7 +24,7 @@ export function FeatureCard({
     scale: Award,
   };
 
-  const IconComponent = icons[iconType] || UserPlus;
+  // const IconComponent = icons[iconType] || UserPlus;
 
   return (
     <Card className="relative overflow-visible rounded-[20px] border border-gray-100 bg-white p-6 pt-8 flex flex-col max-w-[260px] min-h-[220px] shadow-sm text-left">
@@ -33,8 +33,8 @@ export function FeatureCard({
         {stepNumber}
       </div>
 
-      <div className="w-12 h-12 rounded-[12px] bg-[#f2fbf5] flex items-center justify-center mb-5 mt-1 border border-[#e2f7ea]">
-        <IconComponent className="w-5 h-5 text-[#00801a]" />
+      <div className="w-12 h-12 rounded-[12px] bg-[rgb(242,251,245)] flex items-center justify-center mb-5 mt-1 border border-[#e2f7ea]">
+        {/* <IconComponent className="w-5 h-5 text-[#00801a]" /> */}
       </div>
 
       {/* Text content */}

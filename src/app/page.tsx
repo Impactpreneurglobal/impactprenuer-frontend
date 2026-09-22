@@ -181,7 +181,7 @@ export default function Home() {
                 title={card.title}
                 body={card.body}
                 stepNumber={card.stepNumber}
-                iconType={(card as any).iconType}
+                // iconType={(card as any).iconType}
 
               />
             ))}
