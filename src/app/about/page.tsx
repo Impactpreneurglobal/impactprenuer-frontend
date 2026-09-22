@@ -123,7 +123,7 @@ and globally inspired starting with African changemakers.`,
     },
     {
       id: 5,
-      name: "John Doe",
+      name: "John Sitoe",
       role: "Head of Social Media Strategy",
       imageUrl: "/images/Profile5.png",
       linkedinUrl: "https://linkedin.com",
@@ -150,6 +150,12 @@ and globally inspired starting with African changemakers.`,
       linkedinUrl: "https://linkedin.com",
       email: "david.c@example.com",
     },
+    {
+      id: 9,
+      name: "Maxwell Edunfunke",
+      role: "CO Chief Technology Officer (CO-CTO)",
+      linkedinUrl: "linkedin.com"
+    }
   ],
 };
 

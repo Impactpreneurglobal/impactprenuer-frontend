@@ -45,7 +45,7 @@ const handleSubmit = (e: React.FormEvent) => {
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-gray-400 shrink-0" />
                 <a href="mailto:hello@impactpreneur.global" className="hover:underline">
-                  hello@impactpreneur.global
+                  support@impactpreneur.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
