@@ -8,8 +8,8 @@ import { User, Clock, Calendar } from "lucide-react"; // Added standard Lucide i
 export interface BlogCardProps {
   id?: string | number
   title?: string
-  name: string,
-  time: string,
+  name?: string,
+  time?: string,
   date?: string,
   subtitle?: string
   body?: string

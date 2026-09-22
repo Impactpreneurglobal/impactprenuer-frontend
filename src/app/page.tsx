@@ -205,7 +205,7 @@ export default function Home() {
             {HowItWorksCards.map((program) => (
               <ProgramCard
                 key={program.id}
-                // id={program.id}
+                id={program.id}
                 title={program.title}
                 subtitle={program.subtitle}
                 imageUrl={program.imageUrl}
