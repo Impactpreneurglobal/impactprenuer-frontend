@@ -118,12 +118,12 @@ export function Header() {
       )}
 
       <aside
-        className={`fixed top-0 left-0 z-50 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ${
+        className={`fixed top-0 left-0 z-50 h-[70%] w-full bg-white shadow-lg transform transition-transform duration-300 ${
           mobileOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <div className="flex justify-end p-4">
-          <button onClick={() => setMobileOpen(false)}>
+          <button onClick={() => setMobileOpen(false)} className="cursor-pointer">
             <XIcon />
           </button>
         </div>
