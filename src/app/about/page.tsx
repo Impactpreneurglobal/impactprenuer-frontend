@@ -105,6 +105,7 @@ and globally inspired starting with African changemakers.`,
     },
   ],
   members: [
+    
     {
       id: 3,
       name: "Martin Mafokeng",
@@ -121,32 +122,36 @@ and globally inspired starting with African changemakers.`,
       linkedinUrl: "https://linkedin.com",
       email: "salawu@example.com",
     },
-    {
-      id: 6,
-      name: "Desmond Akalugwu",
-      role: "Chief Product Officer (CPO)",
-      imageUrl: "/images/Profile7.png",
-      linkedinUrl: "https://linkedin.com",
-      email: "desmond@example.com",
-    },
-    {
-      id: 7,
-      name: "David Ahanotu",
-      role: "Chief Marketing Officer (CMO)",
-      imageUrl: "/images/Profile10.png",
-      linkedinUrl: "https://linkedin.com",
-      email: "david@example.com",
-    },
-    {
-      id: 8,
+      {
+      id: 5,
       name: "David Chukwuchebem",
       role: "Chief Technology Officer (CTO)",
       imageUrl: "/images/Profile9.png",
       linkedinUrl: "https://linkedin.com",
       email: "david.c@example.com",
     },
+
+     {
+      id: 6,
+      name: "David Ahanotu",
+      role: "Chief Marketing Officer (CMO)",
+      imageUrl: "/images/Profile10.png",
+      linkedinUrl: "https://linkedin.com",
+      email: "david@example.com",
+    },
+
     {
-      id: 9,
+      id: 7,
+      name: "Desmond Akalugwu",
+      role: "Chief Product Officer (CPO)",
+      imageUrl: "/images/Profile7.png",
+      linkedinUrl: "https://linkedin.com",
+      email: "desmond@example.com",
+    },
+   
+  
+    {
+      id: 8,
       name: "Maxwell Edunfunke",
       role: "Co-Chief Technology Officer (Co-CTO)",
       imageUrl: "/images/Profile6.png",
