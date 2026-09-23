@@ -40,7 +40,7 @@ const handleSubmit = (e: React.FormEvent) => {
             <div className="flex flex-col gap-3.5 text-[14px] text-gray-300 mt-2">
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-gray-400 shrink-0" />
-                <span>123 Impact Street, Innovation District, Global City</span>
+                <span>Nigeria Distributed Globally</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-gray-400 shrink-0" />
