@@ -146,7 +146,7 @@ and globally inspired starting with African changemakers.`,
     },
     {
       id: 8,
-      name: "David Chukwuebuka",
+      name: "David Chukwuchebem",
       role: "Chief Technology Officer (CTO)",
       linkedinUrl: "https://linkedin.com",
       email: "david.c@example.com",
