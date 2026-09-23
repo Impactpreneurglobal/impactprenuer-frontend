@@ -115,7 +115,7 @@ and globally inspired starting with African changemakers.`,
     },
     {
       id: 4,
-      name: "Salawu Primsi",
+      name: "Selewu Prossy",
       role: "Marketing Content Lead",
       imageUrl: "/images/Profile3.png",
       linkedinUrl: "https://linkedin.com",
