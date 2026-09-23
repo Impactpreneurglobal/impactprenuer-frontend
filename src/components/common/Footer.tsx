@@ -40,18 +40,18 @@ const handleSubmit = (e: React.FormEvent) => {
             <div className="flex flex-col gap-3.5 text-[14px] text-gray-300 mt-2">
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-gray-400 shrink-0" />
-                <span>Nigeria Distributed Globally</span>
+                <span className="font-bold text-[20px]">Nigeria . Distributed Globally</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-gray-400 shrink-0" />
                 <a href="mailto:hello@impactpreneur.global" className="hover:underline">
-                  support@impactpreneur.com
+                  impactpreneurglobal@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-gray-400 shrink-0" />
                 <a href="tel:+1234567890" className="hover:underline">
-                  +1 (234) 567-890
+                  +2348168010494
                 </a>
               </div>
             </div>
