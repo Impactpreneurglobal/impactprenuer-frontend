@@ -80,7 +80,7 @@ const faqData = [
           <div className="md:col-span-5 bg-[#E8F5E9]/60 border border-[#C8E6C9]/40 rounded-[24px] px-3 w-[450px] h-[253px] flex flex-col justify-center space-y-6 space-x-4">
             <div className="flex items-start gap-4 text-sm text-gray-700">
               <Mail className="w-5 h-5 text-[#2e7d32] mt-0.5 flex-shrink-0" />
-              <span className="break-all font-light">support@impactpreneurglobal.org</span>
+              <span className="break-all font-light">impactpreneurglobal@gmail.com</span>
             </div>
             
             <div className="flex items-start gap-4 text-sm text-gray-700">
@@ -91,13 +91,13 @@ const faqData = [
             <div className="flex items-start gap-4 text-sm text-gray-700">
               <MapPin className="w-5 h-5 text-[#2e7d32] mt-0.5 flex-shrink-0" />
               <span className="font-light">
-                San Francisco Convention Center –  San <br /> Francisco, CA + Virtual Access
+                Nigeria • Distributed Globally
               </span>
             </div>
 
             <div className="flex items-start gap-4 text-sm text-gray-700">
               <Phone className="w-5 h-5 text-[#2e7d32] mt-0.5 flex-shrink-0" />
-              <span className="font-light">+234 703 234 XXXX</span>
+              <span className="font-light">+2348168010495</span>
             </div>
           </div>
 

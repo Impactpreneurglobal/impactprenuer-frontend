@@ -92,16 +92,16 @@ and globally inspired starting with African changemakers.`,
       name: "George Bassey",
       role: "Co-Founder & Chief Executive Officer (CEO)",
       imageUrl: "/images/Profile1.png",
-      linkedinUrl: "https://linkedin.com",
-      email: "george@example.com",
+      linkedinUrl: "https://linkedin.com/in/george-bassey",
+      email: "georgebassey777@gmail.com",
     },
     {
       id: 2,
       name: "Promise Joshua",
       role: "Co-Founder & Chief Vision Officer (CVO)",
       imageUrl: "/images/Profile2.png",
-      linkedinUrl: "https://linkedin.com",
-      email: "promise@example.com",
+      linkedinUrl: "https://www.linkedin.com/in/promise-joshua-980b79363",
+      email: "joshuapromise757@gmail.com",
     },
   ],
   members: [
@@ -127,8 +127,8 @@ and globally inspired starting with African changemakers.`,
       name: "David Chukwuchebem",
       role: "Chief Technology Officer (CTO)",
       imageUrl: "/images/Profile9.png",
-      linkedinUrl: "https://linkedin.com",
-      email: "david.c@example.com",
+      linkedinUrl: "https://linkedin.com/in/david-chukwuchebem",
+      email: "daviddominic767.com",
     },
 
      {
@@ -137,7 +137,7 @@ and globally inspired starting with African changemakers.`,
       role: "Chief Marketing Officer (CMO)",
       imageUrl: "/images/Profile10.png",
       linkedinUrl: "https://linkedin.com",
-      email: "david@example.com",
+      email: "nikewidestudio@gmail.com",
     },
 
     {
@@ -155,7 +155,16 @@ and globally inspired starting with African changemakers.`,
       name: "Maxwell Edunfunke",
       role: "Co-Chief Technology Officer (Co-CTO)",
       imageUrl: "/images/Profile6.png",
-      linkedinUrl: "linkedin.com"
+      linkedinUrl: "https://www.linkedin.com/in/maxwell-edunfunke-934431343/",
+      email: "maxwellsmall88@gmail.com"
+    },
+    {
+      id: 9,
+      name: "Emmanuel Yakubu",
+      role: "Lead Backend Engineer",
+      imageUrl: "images/Profile11.png",
+      linkedinUrl: "https://linkedin.com/in/tethcode",
+      email: "tethcode@gmail.com"
     }
   ],
 };
@@ -168,7 +177,7 @@ and globally inspired starting with African changemakers.`,
           About Us
         </span>
         <h1 className="text-4xl font-extrabold text-gray-950 mb-4 tracking-tight">
-          Building a Global Community <br /> of <br /> <span className="text-green-500 block sm:inline">Impact Enterpreneurs</span>
+          Building a Global Community <br /> of <br /> <span className="text-green-500 block sm:inline">Impact Entrepreneurs</span>
         </h1>
         <p className="text-gray-500 text-base  mx-auto leading-relaxed">
          We're on a mission to empower entrepreneurs who are creating meaningful change, providing them with <br /> the tools, connections, and support to build sustainable impact ventures.

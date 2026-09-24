@@ -50,8 +50,8 @@ const handleSubmit = (e: React.FormEvent) => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-gray-400 shrink-0" />
-                <a href="tel:+1234567890" className="hover:underline">
-                  +2348168010494
+                <a href="tel:+2348168010495" className="hover:underline">
+                  +2348168010495
                 </a>
               </div>
             </div>
