@@ -54,32 +54,32 @@ and globally inspired starting with African changemakers.`,
       icon: User,
       iconBg: 'bg-green-50',
       iconColor: 'text-green-500',
-      title: 'Join Our Community',
-      description: 'Create your profile and tell us about your impact venture. Get instant access to our global network of entrepreneurs, mentors, and resources.',
+      title: 'Empowerment & Transformation',
+      description: 'we turn ideas into impactful ventures by giving entrepreneurs the tools, mentorship and confidence to lead.'
       
     },
     {
       icon: Users,
       iconBg: 'bg-red-50',
       iconColor: 'text-red-400',
-      title: 'Connect with Mentors',
-      description: 'Get matched with experienced mentors in your industry who understand the unique challenges of building impact-driven businesses.',
+       title: 'Innovation & Changemaker',
+      description: 'We fuel bold changemakers who solve real-world problems and build ventures that position Africa at the forefront of global innovation',
       
     },
     {
       icon: Rocket,
       iconBg: 'bg-purple-50',
       iconColor: 'text-purple-500',
-      title: 'Access Programs & Events',
-      description: 'Participate in workshops, masterclasses, and networking events designed to accelerate your growth and expand your impact.',
+      title: 'Community & Accessibility',
+      description: 'We demonstrate access to resources and networks ensuring every visionary has an equal opportunity to build and succeed',
       
     },
     {
       icon: Award,
       iconBg: 'bg-orange-50',
       iconColor: 'text-orange-400',
-      title: 'Scale Your Impact',
-      description: 'Leverage our ecosystem to secure funding, find strategic partners, and grow your venture while staying true to your mission.',
+      title: 'Vision-Led Venturing',
+      description: 'We guide founders to build intentional, purpose-driven businesses that uplift communities and drive sustainable change ',
       
     }
   ];
@@ -111,16 +111,16 @@ and globally inspired starting with African changemakers.`,
       name: "Martin Mafokeng",
       role: "Chief Operating Officer (COO)",
       imageUrl: "/images/Profile5.png",
-      linkedinUrl: "https://linkedin.com",
-      email: "martin@example.com",
+      linkedinUrl: "https://linkedin.com/in/martin-mofokeng-55b938298",
+      email: "martinmofokeng873@gmail.com",
     },
     {
       id: 4,
       name: "Selewu Prossy",
       role: "Head of Community",
       imageUrl: "/images/Profile3.png",
-      linkedinUrl: "https://linkedin.com",
-      email: "salawu@example.com",
+      linkedinUrl: "https://linkedin.com/in/selewu-prossy-86666a34a",
+      email: "prossynaluwu1@gmail.com",
     },
       {
       id: 5,
@@ -145,8 +145,8 @@ and globally inspired starting with African changemakers.`,
       name: "Desmond Akalugwu",
       role: "Chief Product Officer (CPO)",
       imageUrl: "/images/Profile7.png",
-      linkedinUrl: "https://linkedin.com",
-      email: "desmond@example.com",
+      linkedinUrl: "https://linkedin.com/in/desmond-akalugwu-678074373",
+      email: "akalugwudesmond@gmail.com",
     },
    
   

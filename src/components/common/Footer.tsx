@@ -116,7 +116,7 @@ const handleSubmit = (e: React.FormEvent) => {
 
           <div className="flex gap-3">
             <a 
-              href="#" 
+              href="https://www.facebook.com/share/1FaZKabA9K/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
@@ -124,7 +124,7 @@ const handleSubmit = (e: React.FormEvent) => {
               <FaFacebookF className="w-3.5 h-3.5 text-gray-200" />
             </a>
             <a 
-              href="#" 
+              href="https://x.com/Impactpreneur_G" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
@@ -132,7 +132,7 @@ const handleSubmit = (e: React.FormEvent) => {
               <FaXTwitter className="w-3.5 h-3.5 text-gray-200" />
             </a>
             <a 
-              href="#" 
+            href="https://www.linkedin.com/company/impactpreneur-global/"
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
@@ -140,7 +140,7 @@ const handleSubmit = (e: React.FormEvent) => {
               <FaLinkedinIn className="w-3.5 h-3.5 text-gray-200" />
             </a>
             <a 
-              href="#" 
+              href="https://www.instagram.com/impactpreneurglobal?stkn=MTdnajhwOXc2cXZkZw==" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"

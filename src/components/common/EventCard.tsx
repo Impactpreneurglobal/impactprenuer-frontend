@@ -35,13 +35,11 @@ export const EventCard: React.FC<EventCardProps> = ({
           alt={title} 
           className="w-full h-full object-cover" 
         />
-        {/* Dynamic Badge Tag (e.g., "Summit") */}
         <span className="absolute top-4 left-4 bg-white text-emerald-600 text-[10px] font-semibold px-2.5 py-1 rounded-full shadow-sm">
           {tag}
         </span>
       </div>
 
-      {/* Card Content Content Layout */}
       <div className="p-6 flex flex-col flex-1">
         <h3 className="text-lg font-bold text-gray-900 mb-2 leading-snug">
           {title}
@@ -50,13 +48,12 @@ export const EventCard: React.FC<EventCardProps> = ({
           {description}
         </p>
 
-        {/* Metadata Details Grid Row Elements */}
         <div className="space-y-3 mb-6 text-sm text-gray-600 flex-1">
           <div className="flex items-center gap-3">
             <Clock className="w-4 h-4 text-emerald-600 flex-shrink-0" />
             <span>{time}</span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-startjustify-start gap-2">
             <MapPin className="w-4 h-4 text-emerald-600 flex-shrink-0" />
             <span>{location}</span>
           </div>
