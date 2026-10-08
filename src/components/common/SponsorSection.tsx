@@ -11,6 +11,7 @@ export default function SponsorSection() {
     "/logos/partner4.png",
     "/logos/partner5.png",
     "/logos/partner6.png",
+    // "/logos/partner7.png",
   ];
 
   const duplicatedLogos = [...brandLogos, ...brandLogos];

@@ -138,25 +138,56 @@ export default function Home() {
   const testimonialData = [
     {
       rating: 5,
-      testimonial: "Impactpreneur Global is helping inspire me with new network/friends to build the world anew with books and other sources of ideas so that we can finally celebrate the oneness of mankind, our human family.",
+      testimonial: "Impactpreneur Global, through their CEO's LIbrary, has equipped me with the knowledge and skills needed to navigate the complexities of personal finance, make informed decisions, and manage my money more effectively.",
       avatarSrc: "/images/profile1.jpg",
-      author: "Edward Joseph Sullivan",
-      location: "From Mexico",
+      author: "Romana blessed Maboreke",
+      location: "From Republic of zimbabwe",
     },
     {
       rating: 5,
-      testimonial: "A big thank you to Impactpreneur Global team! Your selfless support in providing rare books and resources on request is truly a blessing. You are empowering so many readers with knowledge – deeply grateful!",
+      testimonial: "Impactpreneur Global has provided me with in valuable resources that have significantly transformed my life. it has given me access to a wide range of business and entrepreneurial resources that have expanded my knowledge, strengthen my understanding, and supported my personal growth. Impactrpreneur Global has had a profound impact on the way i learn, think, and grow. ",
       avatarSrc: "/images/profile2.jpg",
-      author: "Ruvi Banerjee",
-      location: "From India",
+      author: "Thuok Olock Puk",
+      location: "From Ethiopia",
     },
     {
       rating: 5,
-      testimonial: "Impactpreneur Global has equipped me with the knowledge and skills needed to navigate the complexities of personal finance, make informed decisions and manage my money more effectively.",
+      testimonial: "Impactpreneur Global taught me how to turn my passion into profit by building a business that ignites my soul and inspires others.",
       avatarSrc: "/images/profile3.jpg",
-      author: "Romana Blessed Maboreke",
-      location: "From the Republic of Zimbabwe",
+      author: "Last Tonhodzai ",
+      location: "From Zimbabwe",
     },
+
+    {
+      rating: 5,
+      testimonial: "Impactpreneur Global has truly transformed the way i think and lead. Through the powerful trainings. practical learning. and supportive network, I've gained clarity, confidence and strategic insights to scale my vision and grow as a purpose-driven entrepreneur",
+      avatarSrc: "/images/profile3.jpg",
+      author: "Peter Kariuki ",
+      location: "From Kenya, Nairobi",
+    },
+    {
+      rating: 5,
+      testimonial: "beiiiing part of this community has shown me that something meanginful truly believe this is a place where great entrepreneurs will emerge. I know that through Impactpreneur Global, CEOs and future leaders will be discovered. keep up the good work, family. God bless you all immensely. ",
+      avatarSrc: "/images/profile3.jpg",
+      author: "Egwudike Maxwell Chigozie ",
+      location: "From Nigeria",
+    },
+    {
+      rating: 5,
+      testimonial: "through the impactpreneurs Global community and it's resources, I have experienced. positive changes in both my life and business. it has taught me how to deal with costomers, understand what to do and what not to do, and approach business differently. My thinking and mentally have also changed for the better.",
+      avatarSrc: "/images/profile3.jpg",
+      author: "Vandy Hassan ",
+      location: "From Sierre Leone",
+    },
+    {
+      rating: 5,
+      testimonial: "Impactpreneur Global taught me how to turn my passion into profit by building a business that ignites my soul and inspires others.",
+      avatarSrc: "/images/profile3.jpg",
+      author: "Camara Abdoulaye ",
+      location: "From Guinea Conakry",
+    },
+    
+
   ];
 
   return (

@@ -162,7 +162,7 @@ and globally inspired starting with African changemakers.`,
       id: 9,
       name: "Emmanuel Yakubu",
       role: "Lead Backend Engineer",
-      imageUrl: "images/Profile11.png",
+      imageUrl: "images/Profile12.png",
       linkedinUrl: "https://linkedin.com/in/tethcode",
       email: "tethcode@gmail.com"
     }

@@ -139,7 +139,7 @@ export function CarouselCard() {
   const slides = [
     {
       src: "/images/hero.png",
-      badge: "• Join 10,000+ Impact Entrepreneur",
+      badge: "• Join 200,000+ Impact Entrepreneur",
       title: "Empowering Impact-Driven Entrepreneurs Worldwide",
       description: "Your idea deserves more than inspiration. Build it with expert-led learning, world-class services, a high-trust community, and the tech infrastructure to launch, grow, and scale your venture globally.",
     }
@@ -200,7 +200,7 @@ export function CarouselCard() {
             <div className="absolute w-[90%] bottom-6 flex justify-between items-center text-white font-bold ">
               <div>
                 <p className="text-xl font-bold font-dm-sans">200K+</p>
-                <p className="text-xs text-white/60">Members</p>
+                <p className="text-xs text-white/60">Cmmunity Members</p>
               </div>
               <div>
                 <p className="text-xl font-bold font-dm-sans">20+</p>
