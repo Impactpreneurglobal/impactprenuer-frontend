@@ -167,14 +167,14 @@ export default function Home() {
     },
     {
       rating: 5,
-      testimonial: "beiiiing part of this community has shown me that something meanginful truly believe this is a place where great entrepreneurs will emerge. I know that through Impactpreneur Global, CEOs and future leaders will be discovered. keep up the good work, family. God bless you all immensely. ",
-      avatarSrc: "/images/profile3.jpg",
+      testimonial: "Being part of this community has shown me that something meanginful truly believe this is a place where great entrepreneurs will emerge. I know that through Impactpreneur Global, CEOs and future leaders will be discovered. keep up the good work, family. God bless you all immensely. ",
+      avatarSrc: "public/images/profile3.jpg",
       author: "Egwudike Maxwell Chigozie ",
       location: "From Nigeria",
     },
     {
       rating: 5,
-      testimonial: "through the impactpreneurs Global community and it's resources, I have experienced. positive changes in both my life and business. it has taught me how to deal with costomers, understand what to do and what not to do, and approach business differently. My thinking and mentally have also changed for the better.",
+      testimonial: "Through impactpreneurs Global community and it's resources, I have experienced. positive changes in both my life and business. it has taught me how to deal with costomers, understand what to do and what not to do, and approach business differently. My thinking and mentally have also changed for the better.",
       avatarSrc: "/images/profile3.jpg",
       author: "Vandy Hassan ",
       location: "From Sierre Leone",

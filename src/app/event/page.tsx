@@ -26,7 +26,7 @@ const page = () => {
   },
   {
     id: 2,
-    title: "Impact AI Bootcapm",
+    title: "Impact AI Bootcamp",
     description:  "Master advanced AI tools and business automation strategies to scale operations, build sustainable venture structures, and drive high-growth impact across regions.",
     imageUrl: "/images/Event2.png",
     tag: "Register Now",
