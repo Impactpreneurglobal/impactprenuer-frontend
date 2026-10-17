@@ -71,7 +71,7 @@ const Page = () => {
       <main>
         <section className="max-w-3xl mx-auto text-center py-20 px-4">
           <span className="inline-block bg-green-50 text-green-600 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-            Join 200,000+ Impact Entrepreneurs
+            Join 200,000+ Impactpreneur
           </span>
           <h1 className="text-4xl font-extrabold text-gray-950 mb-4 tracking-tight">
             Join a Global Ecosystem for <br />
