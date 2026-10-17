@@ -4,15 +4,15 @@ import Link from "next/link"
 import { LucideIcon } from "lucide-react"
 
 export interface ProgramCardProps {
-  // id: string | number
+  id: string | number
   title?: string
   date?: string
   subtitle?: string
   ctaText?: string
   ctaHref?: string
   imageUrl?: string
-  Icon: LucideIcon
-  iconBgColor?: string // e.g., "bg-green-50", "bg-blue-50"
+  Icon?: LucideIcon
+  iconBgColor?: string
   iconColor?: string
 
 }

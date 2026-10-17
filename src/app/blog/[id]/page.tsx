@@ -153,7 +153,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
                 {HowItWorksCards.map((program) => (
                   <ProgramCard
                     key={program.id}
-                    // id={program.id}
+                    id={program.id}
                     title={program.title}
                     subtitle={program.subtitle}
                     imageUrl={program.imageUrl}

@@ -91,7 +91,7 @@ const Page: React.FC<FormDataProps> = ({ onSubmit, Loading = false }) => {
             Insights & Stories
           </span>
           <h1 className="text-4xl font-extrabold text-gray-950 mb-4 tracking-tight">
-            Impact Entrepreneur <span className="text-green-500 block sm:inline">Blog</span>
+            Impactprenuer <span className="text-green-500 block sm:inline">Blog</span>
           </h1>
           <p className="text-[17px] font-dm-sans">
             Stories, insights, and resources from our global community of impact entrepreneurs. Learn from success stories, industry experts, and thought leaders.

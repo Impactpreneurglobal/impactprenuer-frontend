@@ -40,18 +40,18 @@ const handleSubmit = (e: React.FormEvent) => {
             <div className="flex flex-col gap-3.5 text-[14px] text-gray-300 mt-2">
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-gray-400 shrink-0" />
-                <span>123 Impact Street, Innovation District, Global City</span>
+                <span className="font-bold text-[20px]">Nigeria • Distributed Globally</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-gray-400 shrink-0" />
                 <a href="mailto:hello@impactpreneur.global" className="hover:underline">
-                  hello@impactpreneur.global
+                  impactpreneurglobal@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-gray-400 shrink-0" />
-                <a href="tel:+1234567890" className="hover:underline">
-                  +1 (234) 567-890
+                <a href="tel:+2348168010495" className="hover:underline">
+                  +2348168010495
                 </a>
               </div>
             </div>
@@ -116,7 +116,7 @@ const handleSubmit = (e: React.FormEvent) => {
 
           <div className="flex gap-3">
             <a 
-              href="#" 
+              href="https://www.facebook.com/share/1FaZKabA9K/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
@@ -124,7 +124,7 @@ const handleSubmit = (e: React.FormEvent) => {
               <FaFacebookF className="w-3.5 h-3.5 text-gray-200" />
             </a>
             <a 
-              href="#" 
+              href="https://x.com/Impactpreneur_G" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
@@ -132,7 +132,7 @@ const handleSubmit = (e: React.FormEvent) => {
               <FaXTwitter className="w-3.5 h-3.5 text-gray-200" />
             </a>
             <a 
-              href="#" 
+            href="https://www.linkedin.com/company/impactpreneur-global/"
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
@@ -140,7 +140,7 @@ const handleSubmit = (e: React.FormEvent) => {
               <FaLinkedinIn className="w-3.5 h-3.5 text-gray-200" />
             </a>
             <a 
-              href="#" 
+              href="https://www.instagram.com/impactpreneurglobal?stkn=MTdnajhwOXc2cXZkZw==" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"

@@ -146,7 +146,7 @@
 "use client"
 
 import * as React from "react"
-import Image from "next/image"
+import Image from "@/public/3d_avatar_1.png"
 import { Badge } from "@/src/components/ui/badge"
 
 // 1. Updated Interface for an individual testimonial card based on the screenshot
@@ -187,10 +187,10 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
       {/* Footer / Author Section */}
       <div className="flex items-center gap-3 pt-4 mt-4 border-t border-gray-100">
         <div className="relative w-10 h-10 overflow-hidden rounded-full bg-gray-100">
-          <Image
+          <img
             src={avatarSrc}
             alt={author}
-            fill
+            
             className="object-cover"
           />
         </div>

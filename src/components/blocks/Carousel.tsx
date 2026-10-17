@@ -139,7 +139,7 @@ export function CarouselCard() {
   const slides = [
     {
       src: "/images/hero.png",
-      badge: "• Join 10,000+ Impact Entrepreneur",
+      badge: "• Join 200,000+ Impactprenuer",
       title: "Empowering Impact-Driven Entrepreneurs Worldwide",
       description: "Your idea deserves more than inspiration. Build it with expert-led learning, world-class services, a high-trust community, and the tech infrastructure to launch, grow, and scale your venture globally.",
     }
@@ -178,8 +178,8 @@ export function CarouselCard() {
                 )}
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-dm-sans text-white tracking-tight leading-[1.15] mb-4 max-w-3xl">
-                  Empowering Impact-<br />Driven <br />
-                  <span className="text-[#4ade80]">Entrepreneurs Worldwide</span>
+                  The Launchpad for <br />
+                  <span className="text-[#4ade80]"> Impact-Driven <br /> Entrepreneurs</span>
                 </h1>
 
                 <p className="text-sm md:text-base text-white/80 font-normal leading-relaxed mb-8 max-w-2xl">
@@ -199,8 +199,8 @@ export function CarouselCard() {
 
             <div className="absolute w-[90%] bottom-6 flex justify-between items-center text-white font-bold ">
               <div>
-                <p className="text-xl font-bold font-dm-sans">10K+</p>
-                <p className="text-xs text-white/60">Members</p>
+                <p className="text-xl font-bold font-dm-sans">200K+</p>
+                <p className="text-xs text-white/60">Cmmunity Members</p>
               </div>
               <div>
                 <p className="text-xl font-bold font-dm-sans">20+</p>
@@ -220,3 +220,6 @@ export function CarouselCard() {
     </div>
   )
 }
+
+
+

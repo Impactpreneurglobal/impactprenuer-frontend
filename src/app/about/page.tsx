@@ -54,32 +54,32 @@ and globally inspired starting with African changemakers.`,
       icon: User,
       iconBg: 'bg-green-50',
       iconColor: 'text-green-500',
-      title: 'Join Our Community',
-      description: 'Create your profile and tell us about your impact venture. Get instant access to our global network of entrepreneurs, mentors, and resources.',
+      title: 'Empowerment & Transformation',
+      description: 'we turn ideas into impactful ventures by giving entrepreneurs the tools, mentorship and confidence to lead.'
       
     },
     {
       icon: Users,
       iconBg: 'bg-red-50',
       iconColor: 'text-red-400',
-      title: 'Connect with Mentors',
-      description: 'Get matched with experienced mentors in your industry who understand the unique challenges of building impact-driven businesses.',
+       title: 'Innovation & Changemaker',
+      description: 'We fuel bold changemakers who solve real-world problems and build ventures that position Africa at the forefront of global innovation',
       
     },
     {
       icon: Rocket,
       iconBg: 'bg-purple-50',
       iconColor: 'text-purple-500',
-      title: 'Access Programs & Events',
-      description: 'Participate in workshops, masterclasses, and networking events designed to accelerate your growth and expand your impact.',
+      title: 'Community & Accessibility',
+      description: 'We demonstrate access to resources and networks ensuring every visionary has an equal opportunity to build and succeed',
       
     },
     {
       icon: Award,
       iconBg: 'bg-orange-50',
       iconColor: 'text-orange-400',
-      title: 'Scale Your Impact',
-      description: 'Leverage our ecosystem to secure funding, find strategic partners, and grow your venture while staying true to your mission.',
+      title: 'Vision-Led Venturing',
+      description: 'We guide founders to build intentional, purpose-driven businesses that uplift communities and drive sustainable change ',
       
     }
   ];
@@ -92,64 +92,80 @@ and globally inspired starting with African changemakers.`,
       name: "George Bassey",
       role: "Co-Founder & Chief Executive Officer (CEO)",
       imageUrl: "/images/Profile1.png",
-      linkedinUrl: "https://linkedin.com",
-      email: "george@example.com",
+      linkedinUrl: "https://linkedin.com/in/george-bassey",
+      email: "georgebassey777@gmail.com",
     },
     {
       id: 2,
       name: "Promise Joshua",
       role: "Co-Founder & Chief Vision Officer (CVO)",
       imageUrl: "/images/Profile2.png",
-      linkedinUrl: "https://linkedin.com",
-      email: "promise@example.com",
+      linkedinUrl: "https://www.linkedin.com/in/promise-joshua-980b79363",
+      email: "joshuapromise757@gmail.com",
     },
   ],
   members: [
+    
     {
       id: 3,
-      name: "Martin Malokong",
+      name: "Martin Mafokeng",
       role: "Chief Operating Officer (COO)",
-      imageUrl: "/images/Profile3.png",
-      linkedinUrl: "https://linkedin.com",
-      email: "martin@example.com",
+      imageUrl: "/images/Profile5.png",
+      linkedinUrl: "https://linkedin.com/in/martin-mofokeng-55b938298",
+      email: "martinmofokeng873@gmail.com",
     },
     {
       id: 4,
-      name: "Salawu Primsi",
-      role: "Marketing Content Lead",
-      imageUrl: "/images/Profile4.png",
-      linkedinUrl: "https://linkedin.com",
-      email: "salawu@example.com",
+      name: "Selewu Prossy",
+      role: "Head of Community",
+      imageUrl: "/images/Profile3.png",
+      linkedinUrl: "https://linkedin.com/in/selewu-prossy-86666a34a",
+      email: "prossynaluwu1@gmail.com",
     },
-    {
+      {
       id: 5,
-      name: "John Doe",
-      role: "Head of Social Media Strategy",
-      imageUrl: "/images/Profile5.png",
-      linkedinUrl: "https://linkedin.com",
-      email: "john@example.com",
+      name: "David Chukwuchebem",
+      role: "Chief Technology Officer (CTO)",
+      imageUrl: "/images/Profile9.png",
+      linkedinUrl: "https://linkedin.com/in/david-chukwuchebem",
+      email: "daviddominic767.com",
     },
-    {
+
+     {
       id: 6,
-      name: "Desmond Atologwu",
-      role: "Chief Product Officer (CPO)",
-      linkedinUrl: "https://linkedin.com",
-      email: "desmond@example.com",
-    },
-    {
-      id: 7,
       name: "David Ahanotu",
       role: "Chief Marketing Officer (CMO)",
+      imageUrl: "/images/Profile10.png",
       linkedinUrl: "https://linkedin.com",
-      email: "david@example.com",
+      email: "nikewidestudio@gmail.com",
     },
+
+    {
+      id: 7,
+      name: "Desmond Akalugwu",
+      role: "Chief Product Officer (CPO)",
+      imageUrl: "/images/Profile7.png",
+      linkedinUrl: "https://linkedin.com/in/desmond-akalugwu-678074373",
+      email: "akalugwudesmond@gmail.com",
+    },
+   
+  
     {
       id: 8,
-      name: "David Chukwuebuka",
-      role: "Chief Technology Officer (CTO)",
-      linkedinUrl: "https://linkedin.com",
-      email: "david.c@example.com",
+      name: "Maxwell Edunfunke",
+      role: "Co-Chief Technology Officer (Co-CTO)",
+      imageUrl: "/images/Profile6.png",
+      linkedinUrl: "https://www.linkedin.com/in/maxwell-edunfunke-934431343/",
+      email: "maxwellsmall88@gmail.com"
     },
+    {
+      id: 9,
+      name: "Emmanuel Yakubu",
+      role: "Lead Backend Engineer",
+      imageUrl: "images/Profile12.png",
+      linkedinUrl: "https://linkedin.com/in/tethcode",
+      email: "tethcode@gmail.com"
+    }
   ],
 };
 
@@ -161,7 +177,7 @@ and globally inspired starting with African changemakers.`,
           About Us
         </span>
         <h1 className="text-4xl font-extrabold text-gray-950 mb-4 tracking-tight">
-          Building a Global Community <br /> of <br /> <span className="text-green-500 block sm:inline">Impact Enterpreneurs</span>
+          Building a Global Community <br /> of <br /> <span className="text-green-500 block sm:inline">Impactprenuer</span>
         </h1>
         <p className="text-gray-500 text-base  mx-auto leading-relaxed">
          We're on a mission to empower entrepreneurs who are creating meaningful change, providing them with <br /> the tools, connections, and support to build sustainable impact ventures.
@@ -199,7 +215,8 @@ and globally inspired starting with African changemakers.`,
             </div>
 
           <blockquote className="text-gray-800 text-sm sm:text-[15px] font-medium leading-relaxed mb-6 pr-4">
-            "Impactpreneur Global taught me how to change my passion into profit, by creating a business that ignites my soul and inspires others."
+           "Impactpreneur Global taught me how to turn my passion into profit by building a business that ignites my soul and inspires others.",
+
           </blockquote>
 
           <div className="flex items-center gap-3">
@@ -208,10 +225,10 @@ and globally inspired starting with African changemakers.`,
             </div>
             <div>
               <h4 className="font-bold text-gray-900 text-xs sm:text-sm tracking-tight">
-                Loli Sachedina
+               Camara Abdoulaye
               </h4>
               <p className="text-[11px] text-gray-400 font-medium">
-                Impact Entrepreneur
+                From Guinea Conakry
               </p>
             </div>
           </div>
