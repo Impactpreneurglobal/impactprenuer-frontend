@@ -15,7 +15,7 @@ const page = () => {
   const EventData: EventCardProps[] = [
   {
     id: 1,
-    title: "Impactpreneur Builders Bootcamp", 
+    title: "Impactpreneur Founders Bootcamp", 
     description: "Connect with seasoned experts to gain the practical execution knowledge you need to acquire users, structure organizational culture, and successfully launch your product to the next level.",
     imageUrl: "/images/Event2.png",
     tag: "Register Now",
@@ -68,7 +68,7 @@ const page = () => {
           Featured Events
         </h2>
         <p className="text-[17px] font-dm-sans">
-          Our flagship event bringing together the brightest minds in <br /> impact entrepreneurship.
+          Our flagship event bringing together the brightest minds in <br /> impactpreneurship.
         </p>
         <div className="flex justify-center gap-4 items-center mt-10 ">
           <div className="w-[60%] flex justify-end">
@@ -80,7 +80,7 @@ const page = () => {
           </div>
          <div className="flex flex-col mx-auto justify-start items-start gap-2 h-[684px]">
           <div className="w-[400px] h-[320px] flex flex-col justify-start items-start">
-            <h1 className="text-[17px] text-start font-bold mb-2">Impactpreneur Global Annual 2026</h1>
+            <h1 className="text-[17px] text-start font-bold mb-2">Impactpreneur Bootcamp 2026</h1>
             <p className="text-[15px] text-start mb-2">Join purpose-driven founders, established entrepreneurs from over 20 countries and 4 continents for a two-day intensive digital experience focused on building smarter, not harder. This bootcapm breaks down leverage advanced technology to turn passion into systems automate core operations and scale profits </p>
             <div className="flex items-center justify-center gap-1.5 mt-3">
             <Clock1 className="w-4 h-4 text-gray-500" />
