@@ -136,7 +136,7 @@ const page = () => {
           Upcoming Events
         </h1>
         <p className="text-[17px] font-dm-sans">
-          Join our global ecosystemof impactpreneursat workshops, networking sessions, and masterclasses designed to accelerate your journey from idea to impact
+          Join our global ecosystem of impactpreneurs at workshops, networking sessions, and masterclasses designed to accelerate your journey from idea to impact
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center items-stretch mt-5">
         {EventData.map((event) => (

@@ -177,7 +177,7 @@ and globally inspired starting with African changemakers.`,
           About Us
         </span>
         <h1 className="text-4xl font-extrabold text-gray-950 mb-4 tracking-tight">
-          Building a Global Community <br /> of <br /> <span className="text-green-500 block sm:inline">Impact Entrepreneurs</span>
+          Building a Global Community <br /> of <br /> <span className="text-green-500 block sm:inline">Impactprenuer</span>
         </h1>
         <p className="text-gray-500 text-base  mx-auto leading-relaxed">
          We're on a mission to empower entrepreneurs who are creating meaningful change, providing them with <br /> the tools, connections, and support to build sustainable impact ventures.
@@ -215,7 +215,8 @@ and globally inspired starting with African changemakers.`,
             </div>
 
           <blockquote className="text-gray-800 text-sm sm:text-[15px] font-medium leading-relaxed mb-6 pr-4">
-            "Impactpreneur Global taught me how to change my passion into profit, by creating a business that ignites my soul and inspires others."
+           "Impactpreneur Global taught me how to turn my passion into profit by building a business that ignites my soul and inspires others.",
+
           </blockquote>
 
           <div className="flex items-center gap-3">
@@ -224,10 +225,10 @@ and globally inspired starting with African changemakers.`,
             </div>
             <div>
               <h4 className="font-bold text-gray-900 text-xs sm:text-sm tracking-tight">
-                Loli Sachedina
+               Camara Abdoulaye
               </h4>
               <p className="text-[11px] text-gray-400 font-medium">
-                Impact Entrepreneur
+                From Guinea Conakry
               </p>
             </div>
           </div>

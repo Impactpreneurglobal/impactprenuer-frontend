@@ -179,14 +179,6 @@ export default function Home() {
       author: "Vandy Hassan ",
       location: "From Sierre Leone",
     },
-    {
-      rating: 5,
-      testimonial: "Impactpreneur Global taught me how to turn my passion into profit by building a business that ignites my soul and inspires others.",
-      avatarSrc: "/images/profile3.jpg",
-      author: "Camara Abdoulaye ",
-      location: "From Guinea Conakry",
-    },
-    
 
   ];
 

@@ -134,43 +134,43 @@ const page = () => {
         }
       ]
     },
-     {
-    id: 'technology',
-      title: 'Technology',
-      badgeText: 'Build-with-us',
-      badgeColorClass: 'bg-purple-50 text-purple-600',
-      iconBgClass: 'bg-purple-50 text-purple-600',
-      icon: <GraduationCap className="w-5 h-5" />,
-      description: 'Structured learning programs, membership and certification designed to equip founders with world-class skills.',
-      subItems: [
-        {
-          id: '01',
-          title: 'AI-Powered  Founder Agent',
-          description: 'An intelligent AI agent guiding entrepreneurs from idea to launch regardless of country, industry, or stage. Personalized, practical, and globally informed.',
-          buttonText: 'Request Service'
-        },
-        {
-          id: '02',
-          title: 'Founder Rewards Hub',
-          description: 'A digital library of templates, contracts, frameworks, playbooks, and tools every founder needs to build and run a business.',
-          buttonText: 'Request Service'
-        },
-        {
-          id: '03',
-          title: 'Investor-Founder Matching Platform',
-          description: 'A platform connecting African founders with investors, grants, and funding opportunities aligned to their stage and sector.',
-          buttonText: 'Request Service'
-        },
-        {
-          id: '04',
-          title: 'IG Mobile App',
-          description: 'A single platform bringing together community, courses, tools, and founder support — accessible anywhere across Africa and beyond.',
-          buttonText: 'Request Service'
+    //  {
+    // id: 'technology',
+    //   title: 'Technology',
+    //   badgeText: 'Build-with-us',
+    //   badgeColorClass: 'bg-purple-50 text-purple-600',
+    //   iconBgClass: 'bg-purple-50 text-purple-600',
+    //   icon: <GraduationCap className="w-5 h-5" />,
+    //   description: 'Structured learning programs, membership and certification designed to equip founders with world-class skills.',
+    //   subItems: [
+    //     {
+    //       id: '01',
+    //       title: 'AI-Powered  Founder Agent',
+    //       description: 'An intelligent AI agent guiding entrepreneurs from idea to launch regardless of country, industry, or stage. Personalized, practical, and globally informed.',
+    //       buttonText: 'Request Service'
+    //     },
+    //     {
+    //       id: '02',
+    //       title: 'Founder Rewards Hub',
+    //       description: 'A digital library of templates, contracts, frameworks, playbooks, and tools every founder needs to build and run a business.',
+    //       buttonText: 'Request Service'
+    //     },
+    //     {
+    //       id: '03',
+    //       title: 'Investor-Founder Matching Platform',
+    //       description: 'A platform connecting African founders with investors, grants, and funding opportunities aligned to their stage and sector.',
+    //       buttonText: 'Request Service'
+    //     },
+    //     {
+    //       id: '04',
+    //       title: 'IG Mobile App',
+    //       description: 'A single platform bringing together community, courses, tools, and founder support — accessible anywhere across Africa and beyond.',
+    //       buttonText: 'Request Service'
 
-        },
+    //     },
      
-      ]
-    },
+    //   ]
+    // },
      {
     id: 'partnership',
       title: 'Partnerships & Enterprise',

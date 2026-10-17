@@ -139,7 +139,7 @@ export function CarouselCard() {
   const slides = [
     {
       src: "/images/hero.png",
-      badge: "• Join 200,000+ Impact Entrepreneur",
+      badge: "• Join 200,000+ Impactprenuer",
       title: "Empowering Impact-Driven Entrepreneurs Worldwide",
       description: "Your idea deserves more than inspiration. Build it with expert-led learning, world-class services, a high-trust community, and the tech infrastructure to launch, grow, and scale your venture globally.",
     }
