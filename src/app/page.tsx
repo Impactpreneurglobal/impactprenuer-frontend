@@ -36,7 +36,7 @@ export default function Home() {
       id: 3,
       stepNumber: "03",
       title: "Strategic Partnerships",
-      body: "Access masterclasses, workshops, and networking events designed to accelerate your growth.",
+      body: "Build meaningful connections with partners, investors, and collaborators worldwide."
       
     },
     {
@@ -141,7 +141,7 @@ export default function Home() {
       testimonial: "Impactpreneur Global, through their CEO's LIbrary, has equipped me with the knowledge and skills needed to navigate the complexities of personal finance, make informed decisions, and manage my money more effectively.",
       avatarSrc: "/images/profile1.jpg",
       author: "Romana blessed Maboreke",
-      location: "From zimbabwe",
+      location: "From Zimbabwe",
     },
     {
       rating: 5,

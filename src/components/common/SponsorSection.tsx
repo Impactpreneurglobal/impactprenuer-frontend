@@ -11,9 +11,10 @@ export default function SponsorSection() {
     "/logos/partner4.png",
     "/logos/partner5.png",
     "/logos/partner6.png",
-    // "/logos/partner7.png",
+    "/logos/Partner7.png",
   ];
 
+  // Duplicate the array so Framer Motion has enough width to animate seamlessly to -50%
   const duplicatedLogos = [...brandLogos, ...brandLogos];
 
   return (
@@ -38,7 +39,7 @@ export default function SponsorSection() {
           }}
           transition={{
             ease: "linear",
-            duration: 20, // Lower this number to make them scroll faster, raise it to slow them down
+            duration: 25,
             repeat: Infinity,
           }}
         >
@@ -49,8 +50,9 @@ export default function SponsorSection() {
             >
               <img
                 src={logo}
-                alt={`Partner logo ${index}`}
-                className="max-h-full max-w-full object-contain select-none mix-blend-multiply"
+                alt={`Partner logo ${index + 1}`}
+                /* Added grayscale, opacity, and smooth hover transition */
+                className="max-h-full max-w-full object-contain select-none mix-blend-multiply grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                 draggable="false"
               />
             </div>

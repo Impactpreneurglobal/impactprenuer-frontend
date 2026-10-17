@@ -89,7 +89,7 @@ const faqData = [
           How It <span className="text-green-500 block sm:inline">Works</span>
         </h1>
         <p className="text-gray-500 text-base max-w-2xl mx-auto leading-relaxed">
-          Join thousands of impact entrepreneurs who are transforming their ideas into sustainable ventures. 
+          Join thousands of impactpreneurs who are transforming their ideas into sustainable ventures. 
           Our structured approach helps you connect, learn, and grow at every stage.
         </p>
       </section>
