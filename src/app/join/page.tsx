@@ -82,7 +82,7 @@ const Page = () => {
           </p>
           <div className='flex justify-between items-center mt-5 w-full max-w-md mx-auto'>
             <div>
-              <h2 className="font-dm-sans text-black text-[25px] font-medium">10K+</h2>
+              <h2 className="font-dm-sans text-black text-[25px] font-medium">200K+</h2>
               <p className='font-light text-[12px] text-gray-500'>Members</p>
             </div>
             <div>
