@@ -4,7 +4,7 @@ import { ImageTextSection } from "@/src/components/common/ImageTextSection";
 import { FeatureCard } from "@/src/components/blocks/FeatureCard";
 import { ProgramCard } from "@/src/components/common/ProgramCard";
 import { Badge } from "@/src/components/ui/badge";
-import { Users, MessageSquare, Calendar, TrendingUp, ArrowRight } from "lucide-react";
+import { Users, MessageSquare, Calendar, TrendingUp, ArrowRight, UserPlus, Target, Rocket, Medal, Award  } from "lucide-react";
 import ProfileCard from "@/src/components/common/ProfileCard";
 import { BlogCard } from "../components/common/BlogCard";
 import SponsorSection  from "@/src/components/common/SponsorSection";
@@ -23,28 +23,28 @@ export default function Home() {
       stepNumber: "01",
       title: "Expertise Mentorship",
       body: "Connect with seasoned entrepreneurs and industry leaders who guide your journey to success.",
-      
+      iconType: <UserPlus className="text-green-600"/>
     },
     {
       id: 2,
       stepNumber: "02",
       title: "Exclusive Events",
       body: "Access masterclasses, workshops, and networking events designed to accelerate your growth.",
-      
+      iconType: <Target className="text-green-600"/>
     },
     {
       id: 3,
       stepNumber: "03",
       title: "Strategic Partnerships",
-      body: "Build meaningful connections with partners, investors, and collaborators worldwide."
-      
+      body: "Build meaningful connections with partners, investors, and collaborators worldwide.",
+      iconType: <Rocket className="text-green-600"/>
     },
     {
       id: 4,
       stepNumber: "04",
       title: "Growth Resources",
       body: "Leverage tools, frameworks, and insights to scale your impact venture sustainably.",
-      
+      iconType: <Award className="text-green-600"/>
     },
   ];
 
@@ -204,7 +204,7 @@ export default function Home() {
                 title={card.title}
                 body={card.body}
                 stepNumber={card.stepNumber}
-                // iconType={(card as any).iconType}
+                iconType={(card as any).iconType}
 
               />
             ))}

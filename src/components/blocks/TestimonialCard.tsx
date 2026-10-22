@@ -149,9 +149,8 @@ import * as React from "react"
 import Image from "@/public/3d_avatar_1.png"
 import { Badge } from "@/src/components/ui/badge"
 
-// 1. Updated Interface for an individual testimonial card based on the screenshot
 interface TestimonialCardProps {
-  rating: number         // Number of stars (e.g., 5)
+  rating: number         
   testimonial: string    // The main quote text
   avatarSrc: string      // URL for the profile icon/avatar
   author: string         // Author name (e.g., "Edward Joseph Sullivan")
