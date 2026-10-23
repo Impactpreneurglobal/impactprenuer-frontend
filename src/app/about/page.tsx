@@ -138,6 +138,14 @@ and globally inspired starting with African changemakers.`,
       linkedinUrl: "https://linkedin.com/in/david-chukwuchebem",
       email: "daviddominic767.com",
     },
+    {
+      id: 8,
+      name: "Maxwell Edunfunke",
+      role: "Co-Chief Technology Officer (Co-CTO)",
+      imageUrl: "/images/Profile6.png",
+      linkedinUrl: "https://www.linkedin.com/in/maxwell-edunfunke-934431343/",
+      email: "maxwellsmall88@gmail.com"
+    },
 
      {
       id: 6,
@@ -158,14 +166,7 @@ and globally inspired starting with African changemakers.`,
     },
    
   
-    {
-      id: 8,
-      name: "Maxwell Edunfunke",
-      role: "Co-Chief Technology Officer (Co-CTO)",
-      imageUrl: "/images/Profile6.png",
-      linkedinUrl: "https://www.linkedin.com/in/maxwell-edunfunke-934431343/",
-      email: "maxwellsmall88@gmail.com"
-    },
+    
     {
       id: 9,
       name: "Emmanuel Yakubu",
