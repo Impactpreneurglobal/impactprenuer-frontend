@@ -128,7 +128,7 @@ and globally inspired starting with African changemakers.`,
       role: "Chief Financial Officer (CFO)",
       imageUrl: "/images/Profile13.png",
       linkedinUrl: "https://linkedin.com/in/david-chukwuchebem",
-      email: "daviddominic767.com",
+      email: "jennifertshepang@gmail.com",
     },
       {
       id: 5,
