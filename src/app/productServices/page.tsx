@@ -217,7 +217,6 @@ const page = () => {
     <GeneralLayout>
       <main>
         <section className="max-w-6xl mx-auto text-center py-20 px-4">
-          {/* <Badge>Product/Service</Badge> */}
           <span className="inline-block bg-green-50 text-[#008000] mt-2 text-[15px] font-semibold px-3 py-1 rounded-full mb-4">
           Product/Services
         </span>
@@ -229,7 +228,6 @@ const page = () => {
             Explore the tools, programs, services, technology, and community support designed to help entrepreneurs build, grow, and <br /> scale impactful ventures across Africa and beyond.
           </p>
           
-          {/* Layout adjustment: Grid layout changed to flex or full-width container since accordions look best stacked vertically instead of side-by-side grid cards */}
           <div className="flex flex-col gap-4 text-left max-w-4xl mx-auto mt-10">
             {ServiceData.map((item) => (
               <ServiceAccordion
