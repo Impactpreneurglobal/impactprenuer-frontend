@@ -82,12 +82,14 @@ export const ServiceAccordion: React.FC<AccordionItemProps> = ({
                   </h4>
                 </div>
                 
-                <Link href="/productServices/requestServices/">
-                
-                <Button className="bg-green-600 hover:bg-green-700 text-white rounded-lg text-xs font-semibold px-4 py-2 h-9 self-start sm:self-auto">
-                  {sub.buttonText}
-                </Button>
-                </Link>
+
+            <Link 
+              href={`/productServices/requestServices?service=${encodeURIComponent(sub.title)}`}
+            >
+              <button className="bg-[#008000] text-white px-4 py-2 rounded-lg text-sm font-medium">
+                {sub.buttonText}
+              </button>
+            </Link>
               </div>
 
               <p className="text-gray-500 text-sm max-w-3xl pl-10 leading-relaxed">

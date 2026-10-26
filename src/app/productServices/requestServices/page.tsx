@@ -1,15 +1,27 @@
 "use client"
 
 import React from 'react'
+import { Suspense } from 'react';
 import { GeneralLayout } from "@/src/components/common/GeneralLayout";
 import { Briefcase, GraduationCap, Users, Cpu, Handshake } from 'lucide-react';
 import { AccordionItemProps } from '@/src/components/common/ServiceAccordion';
 import CtaSection from '@/src/components/blocks/CtaSection';
 import {ServiceAccordion} from "@/src/components/common/ServiceAccordion"
 // import {Badge} from "@/src/components/ui/badge"
+import { useSearchParams } from 'next/navigation'; //
 import {RequestForm} from "@/src/components/blocks/RequestForm"
 
+
+
+function ServiceTitleDisplay() {
+  const searchParams = useSearchParams();
+  const serviceTitle = searchParams.get('service') || 'Selected Service';
+  return <span className="font-bold text-gray-900">"{serviceTitle}"</span>;
+}
+
+
 const RequestPage = () => {
+
   const ServiceData: AccordionItemProps[] = [
     {
       id: 'services',
@@ -309,6 +321,9 @@ const RequestPage = () => {
 
   ];
 
+
+
+
   return (
     <GeneralLayout>
       <main>
@@ -320,7 +335,11 @@ const RequestPage = () => {
             Request Services
           </h1>
           <p className="text-[17px] font-dm-sans mx-auto">
-            You picked<span>  “World-Class Branding” </span> <br /> Tell us a little about your needs and our team will reach out with the next steps.
+            You picked<span> 
+              <Suspense fallback={<span>"Loading..."</span>}>
+              <ServiceTitleDisplay />
+            </Suspense>{" "} 
+            </span> <br /> Tell us a little about your needs and our team will reach out with the next steps.
 
           </p>
           

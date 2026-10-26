@@ -62,12 +62,14 @@ interface FeatureCardProps {
   title?: string;
   body: string;
   stepNumber: string;
+  iconType: React.ReactNode
 }
 
 export function FeatureCard({
   title,
   body,
   stepNumber,
+  iconType
 }: FeatureCardProps) {
   return (
     <Card className="relative overflow-visible rounded-[20px] border border-gray-100 bg-white p-6 pt-8 flex flex-col max-w-[260px] min-h-[220px] shadow-sm text-left">
@@ -77,6 +79,7 @@ export function FeatureCard({
       </div>
 
       <div className="w-12 h-12 rounded-[12px] bg-[rgb(242,251,245)] flex items-center justify-center mb-5 mt-1 border border-[#e2f7ea]">
+        {iconType}
       </div>
 
       <div className="space-y-2 flex-1">

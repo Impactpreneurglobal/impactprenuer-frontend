@@ -122,6 +122,14 @@ and globally inspired starting with African changemakers.`,
       linkedinUrl: "https://linkedin.com/in/selewu-prossy-86666a34a",
       email: "prossynaluwu1@gmail.com",
     },
+    {
+      id: 7,
+      name: "Jennifer Tshepang",
+      role: "Chief Financial Officer (CFO)",
+      imageUrl: "/images/Profile13.png",
+      linkedinUrl: "https://linkedin.com/in/david-chukwuchebem",
+      email: "jennifertshepang@gmail.com",
+    },
       {
       id: 5,
       name: "David Chukwuchebem",
@@ -129,6 +137,14 @@ and globally inspired starting with African changemakers.`,
       imageUrl: "/images/Profile9.png",
       linkedinUrl: "https://linkedin.com/in/david-chukwuchebem",
       email: "daviddominic767.com",
+    },
+    {
+      id: 8,
+      name: "Maxwell Edunfunke",
+      role: "Co-Chief Technology Officer (Co-CTO)",
+      imageUrl: "/images/Profile6.png",
+      linkedinUrl: "https://www.linkedin.com/in/maxwell-edunfunke-934431343/",
+      email: "maxwellsmall88@gmail.com"
     },
 
      {
@@ -150,14 +166,7 @@ and globally inspired starting with African changemakers.`,
     },
    
   
-    {
-      id: 8,
-      name: "Maxwell Edunfunke",
-      role: "Co-Chief Technology Officer (Co-CTO)",
-      imageUrl: "/images/Profile6.png",
-      linkedinUrl: "https://www.linkedin.com/in/maxwell-edunfunke-934431343/",
-      email: "maxwellsmall88@gmail.com"
-    },
+    
     {
       id: 9,
       name: "Emmanuel Yakubu",
